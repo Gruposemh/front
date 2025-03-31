@@ -1,0 +1,169 @@
+.imagemFundo {
+    background-image: url(../../../../images/pages/comoAjudar/alimentos.png);
+    background-size: cover;
+    width: 100%;
+    height: 85vh;
+}
+
+.imagemFundo h1 {
+    position: absolute;
+    top: 70%;
+    left: 2.5%;
+    color: white;
+    background: #b20000;
+    font-family: "Julius Sans One", serif;
+    padding: 10px;
+}
+
+.atividades h1 {
+    font-family: "Lato", serif;
+    color: #bfbfbf;
+    text-transform: uppercase;
+}
+
+.atividades {
+    margin: 30px;
+    text-align: center;
+}
+
+.linha {
+    width: 80px;
+    height: 2px;
+    background-color: #B20000;
+    margin: 5px auto;
+}
+
+.introducao {
+    width: 60%;
+    font-size: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin: auto auto;
+}
+
+.introducao span {
+    color: #b20000;
+    font-weight: 600;
+}
+
+.cadastro {
+    margin: auto auto;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 50px;
+}
+.cadastro img {
+    width: 550px;
+}
+.formulario {
+    width: 50%;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+}
+.formulario h1{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 25px;
+}
+.inputs label{
+    font-size: 0.8rem;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    color: #b2b2b2;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.inputs{
+    width: 80%;
+    margin: auto auto;
+}
+.inputs input{
+    box-shadow: 5px 4px 4px rgb(199, 198, 198);
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    width: 90%;
+    font-family: "Open Sans", sans-serif;
+}
+.inputs input:focus{
+    outline: none;
+}
+.pagamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 150px;
+}
+.opcao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.3s;
+    position: relative;
+}
+.opcao:hover {
+    border-color: blue;
+}
+.info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.opcao img {
+    width: 20px;
+    height: 20px;
+}
+.circulo {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    transition: 0.3s;
+}
+.opcao input {
+    display: none;
+}
+.opcao input:checked + .info + .circulo {
+    border-color: blue;
+    box-shadow: 0 0 5px blue;
+}
+.cartao{
+    background: #f2f2f2;
+    margin-top: 100px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.cartao h1{
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;   
+    margin: 75px;
+}
+.btn{
+    text-align: center;
+}
+.btnDoar{
+    text-align: center;
+    margin: 30px;
+    padding:10px;
+    width: 200px;
+    border: 1px solid #bd0101;
+    color: #af0101;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 5px;
+}

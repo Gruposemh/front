@@ -1,0 +1,477 @@
+.acimaDaDobra {
+    background-image: url(../../../../images/pages/quemSomos/campanha.png);
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sombra {
+    height: 500px;
+    width: 100%;
+    background-color: #080809;
+    opacity: 40%;
+    position: absolute;
+}
+
+.quem {
+    position: absolute;
+    color: white;
+    top: 350px;
+    background: #b20000;
+    font-family: "Julius Sans One", serif;
+    padding: 10px;
+    font-size: 32px;
+}
+
+.conheca {
+    position: absolute;
+    top: 430px;
+    font-weight: 200;
+    color: white;
+    background: #b20000;
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+}
+
+
+
+/*Nossa história*/
+
+.historia h1 {
+    font-family: "Lato", serif;
+    color: #bfbfbf;
+    font-size: 30px;
+}
+
+.historia {
+    margin: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.linha {
+    width: 80px;
+    height: 2px;
+    background-color: #B20000;
+    margin: 15px auto;
+}
+
+.historia article {
+    margin-top: 20px;
+    font-family: "Lato", serif;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.historia b {
+    color: #B20000;
+    font-weight: 400;
+}
+
+/* Linha do tempo para baixo */
+.container {
+    display: grid;
+    grid-template-areas:
+    "esquerda" "linha" "direita";
+    grid-template-columns: 8fr 1fr 8fr;
+    
+}
+
+.esquerda {
+    grid-area: "esquerda";
+    height: 1200px;
+}
+
+.linhaDoTempo {
+    grid-area: "linha";
+    display: flex;
+    justify-content: center;
+    height: 2950px;
+}
+
+.direita {
+    height: 1200px;
+    grid-area: "direita";
+}
+
+.traçado {
+    display: flex;
+    flex-direction: column;
+    width: 2px;
+    height: 100%;
+    background-color: #cccaca;
+    position: relative;
+}
+
+.bolinhas {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px
+}
+
+/* Lado esquerdo */
+/* pt1 */
+.vinteQuinze {
+    display: flex;
+}
+
+.vinteQuinze h3 {
+    font-family: "Nunito", sans-serif;
+    margin-left: auto;
+    color: red;
+    font-size: 2rem;
+    grid-area: "direita";
+}
+
+.vinteQuinze img {
+    width: 550px;
+}
+
+.eventos {
+    background: #FFFFF0;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    padding: 23px;
+    width: 390px;
+    box-shadow: 4px 4px 4px rgb(173, 173, 173);
+    text-align: center;
+    margin: -30px auto 70px  auto;
+    font-size: 22px;
+    z-index: 10;
+    position: sticky;
+}
+
+/* fim pt1 */
+
+/* pt2 */
+.doisUmNove {
+    display: flex;
+}
+
+.doisUmNove h3 {
+    font-family: "Nunito", sans-serif;
+    margin-left: auto;
+    color: red;
+    font-size: 2rem;
+    grid-area: "direita";
+}
+
+.doisUmNove img {
+    width: 550px;
+}
+
+.ong {
+    background: #FFFFF0;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    padding: 23px;
+    width: 390px;
+    box-shadow: 4px 4px 4px rgb(173, 173, 173);
+    text-align: center;
+    margin: -30px auto 70px  auto;
+    font-size: 22px;
+    z-index: 10;
+    position: sticky;
+}
+
+/* fim pt2 */
+
+/* pt3 */
+.vinteTres {
+    display: flex;
+}
+
+.vinteTres h3 {
+    font-family: "Nunito", sans-serif;
+    margin-left: auto;
+    color: red;
+    font-size: 2rem;
+    grid-area: "direita";
+}
+
+.vinteTres img {
+    width: 550px;
+}
+
+.novidades {
+    background: #FFFFF0;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    padding: 23px;
+    width: 390px;
+    box-shadow: 4px 4px 4px rgb(173, 173, 173);
+    text-align: center;
+    margin: -30px auto 70px  auto;
+    font-size: 22px;
+    z-index: 10;
+    position: sticky;
+}
+
+/* fim pt3 */
+
+/* pt4 */
+.vinteCinco {
+    display: flex;
+}
+
+.vinteCinco h3 {
+    font-family: "Nunito", sans-serif;
+    margin-left: auto;
+    color: red;
+    font-size: 2rem;
+    grid-area: "direita";
+}
+
+.vinteCinco img {
+    width: 550px;
+}
+
+
+/* fim pt4 */
+
+
+/* Lado direito */
+
+/* pt1 */
+.comecou {
+    margin: 30px auto;
+    width: 350px;
+    background: #FFFFF0;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.25rem;
+    box-shadow: 4px 4px 4px rgb(173, 173, 173);
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    margin: 20px auto;
+    font-size: 22px;
+   
+}
+
+/* fim pt1 */
+/* pt2 */
+.futebol {
+    display: flex;
+}
+
+.futebol h3 {
+    font-family: "Nunito", sans-serif;
+    margin-right: auto;
+    color: red;
+    font-size: 2rem;
+    grid-area: "direita";
+}
+
+.futebol img {
+    height: 400px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.acoesSociais{
+    background: #FFFFF0;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.125rem;
+    padding: 22px;
+    width: 370px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 4px 4px 4px rgb(173, 173, 173);
+    margin: -30px auto 70px  auto;
+    font-size: 22px;
+    z-index: 10;
+    position: sticky;
+}
+
+/* Fim da pt2 */
+
+/* pt3 */
+.doisSete {
+    display: flex;
+}
+
+.doisSete h3 {
+    font-family: "Nunito", sans-serif;
+    margin-right: auto;
+    color: red;
+    font-size: 2rem;
+    grid-area: "direita";
+    
+}
+
+.doisSete img {
+    height: 400px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+
+.construcao{
+    background: #FFFFF0;
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.125rem;
+    padding: 22px;
+    width: 370px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 4px 4px 4px rgb(173, 173, 173);
+    margin: -30px auto 70px  auto;
+    font-size: 22px;
+    z-index: 10;
+    position: sticky;
+}
+
+/* Fim da pt3 */
+
+/* pt4 */
+.vinteQuatro {
+    display: flex;
+}
+
+.vinteQuatro h3 {
+    font-family: "Nunito", sans-serif;
+    margin-right: auto;
+    color: red;
+    font-size: 2rem;
+    grid-area: "direita";
+}
+
+
+
+.vinteQuatro img {
+    height: 400px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+/* Fim da pt4 */
+/* Fim da linha do tempo */
+
+
+
+/* ContainerDois */
+.containerDois{
+    height: 680px;
+    overflow: hidden;
+}
+
+.slides{
+    
+    margin-top: 100px;
+}
+
+.btnSelecao{
+    cursor: pointer;
+    width: 170px;
+    height: 50px;
+    border-radius: 20px 20px 0 0;
+    border: none;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    background-color: #5e0000;
+   
+}
+
+.btnSelecao.ativo{
+    background-color: #B20000;
+    color: #fff;
+    
+}
+
+.opcoes{
+    display: none;
+    padding: 20px;
+    background-color: #B20000;
+    width: 100%;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opcoes img{
+    width: 500px;
+    height: 500px ;
+    margin-right: 70px;
+}
+
+#valores img{
+    width: 900px;
+    margin-right: 60px;
+
+    
+}
+
+.opcoes h3{
+    margin-left: 50px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+/* Fim  do ContainerDois */
+
+
+/* Equipe */
+
+.equipe h1{
+    font-family: "Lato", serif;
+    color: #bfbfbf;
+
+}
+
+.equipe{
+    margin: 70px;
+   text-align: center; 
+
+}
+
+.linha{
+    width: 80px;
+    height: 2px;
+    background-color:#B20000 ;
+    margin: 15px auto;
+
+}
+
+.equipeTexto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.equipeNomes{
+    margin: 70px auto;
+    width: 350px;
+    background: #FFFFF0;
+    padding: 50px;
+    font-weight: 600;
+    text-align: center;
+    width: 400px;
+    box-shadow: 4px 4px 4px rgb(173, 173, 173);
+    border-radius: 20px;
+    font-family: "Nunito", sans-serif;
+    font-size: 27px;
+}
+
+.linhaDois{
+    width: 90%;
+    height: 1px;
+    background-color:#000000 ;
+    margin: 50px auto;
+}
+
+/* fim da Equipe */

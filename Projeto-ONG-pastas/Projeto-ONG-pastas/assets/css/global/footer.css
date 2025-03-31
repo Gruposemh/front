@@ -1,0 +1,81 @@
+.linhaDois{
+    width: 90%;
+    height: 1px;
+    background-color:#000000 ;
+    margin: 80px auto;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    font-family: "Lato", serif;
+}
+
+.footer1{
+     display:flex;
+
+}
+
+.logooo{
+    margin-left: 80px;
+    margin-right: 0;
+}
+
+.footer1 h1{
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: -48px;
+    margin-top: 10px;
+}
+
+
+.fotos img{
+    width: 100px;
+    height: 100px;
+}
+
+.fim h2{
+    color: #B20000;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.fim p {
+    margin: 16px 0;
+    font-family: "Julius Sans One", serif;
+    font-family: 15px;
+}
+
+.fim{
+    margin-left: 110px;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+.direita p{
+    color: #B20000;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 17px 0;
+}
+
+.direita img{
+    width: 700px;
+    margin-right: 20px;
+}
+
+.zap{
+    width: 91px;
+    height: 100px;
+}
+
+.insta{
+    width: 102px;
+    height: 100px;
+}
+
+.face{
+    margin-top: -8px;
+}

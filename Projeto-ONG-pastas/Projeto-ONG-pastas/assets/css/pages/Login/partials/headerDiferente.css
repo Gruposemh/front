@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header{
+    background-image: url(../../../../images/pages/login/saomateus.png);
+    height: 90vh;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+.titulo{
+    position: absolute;
+    top: 70%;
+    left: 2.5%;
+    color: white;
+    background: #b20000;
+    font-family: "Julius Sans One", serif;
+    padding: 10px;
+}

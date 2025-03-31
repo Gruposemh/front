@@ -1,0 +1,118 @@
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .cadastre {
+        margin-left: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .titulo {
+        text-align: center;
+        font-size: 30px;
+        margin: 30px 20px 15px 20px;
+    }
+
+    .titulo span {
+        font-size: 32px;
+    }
+
+    input {
+        width: 90%;
+        margin-left: 0;
+        padding: 12px;
+        margin: 10px auto;
+    }
+
+    .btnCadastrar {
+        width: 90%;
+        margin-left: 0;
+        padding: 12px;
+        margin-top: 15px;
+    }
+
+    .continue {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .apps {
+        margin-left: 0; 
+        justify-content: center;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+
+    .icone {
+        width: 40px;
+        height: 40px;
+        margin: 10px 5px;
+    }
+
+    .ouEntrar {
+        margin-left: 0;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .conjuntoImg {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .cadastre {
+        font-size: 16px;
+    }
+
+    .titulo {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .titulo span {
+        font-size: 28px;
+    }
+
+    input {
+        width: 90%;
+        padding: 14px;
+        margin: 10px auto;
+    }
+
+    .btnCadastrar {
+        width: 90%;
+        padding: 14px;
+    }
+
+    .continue {
+        font-size: 12px;
+    }
+
+    .apps {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icone {
+        width: 35px;
+        height: 35px;
+        margin: 10px 0;
+    }
+
+    .ouEntrar {
+        font-size: 12px;
+    }
+}

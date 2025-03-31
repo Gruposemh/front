@@ -1,0 +1,142 @@
+.imagemFundo {
+    background-image: url(../../../../images/pages/eventos/eventoBeneficiente.png);
+    background-size: cover;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+}
+
+.imagemFundo h2 {
+    position: absolute;
+    top: 80%;
+    right: 120px;
+    text-align: end;
+    color: white;
+    background: #b20000;
+    font-family: "Julius Sans One", serif;
+    padding: 10px;
+}
+
+.titulo {
+    margin: 30px;
+    text-align: center;
+}
+
+.titulo h2 {
+    font-family: "Lato", serif;
+    color: #bfbfbf;
+    text-transform: uppercase;
+}
+
+.linha {
+    width: 50px;
+    height: 2px;
+    background-color: #B20000;
+    margin: 5px auto;
+}
+
+.evento {
+    text-align: center;
+    margin: 50px;
+    justify-self: center;
+    background: #f5f4f4;
+    width: 80%;
+    height: 700px;
+    box-shadow: 3px 5px 4px rgb(209, 209, 209);
+    border-radius: 20px;
+}
+
+.evento img {
+    width: 650px;
+    height: 350px;
+    margin: 20px;
+}
+
+.localizacao {
+    text-transform: uppercase;
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 1rem;
+}
+
+.info {
+    width: 60%;
+    margin: 30px auto;
+    justify-self: center;
+    text-align: start;
+}
+
+.info h3 {
+    font-family: "Open Sans", sans-serif;
+}
+
+.info p {
+    color: #b2b2b2;
+    font-family: "Open Sans", sans-serif;
+}
+
+.btnSaiba {
+    display: inline-block;
+    width: 200px;
+    font-family: "Julius Sans One", sans-serif;
+    color: #ED1B1B;
+    background: white;
+    border: 1px solid #ED1B1B;
+    border-radius: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.btnSaiba:hover {
+    transition: .4s;
+    color: white;
+    background: #ED1B1B;
+    border: 1px solid white;
+}
+
+.campanhas {
+    justify-self: center;
+    text-align: center;
+    position: relative;
+}
+
+.campanhas img {
+    width: 500px;
+    display: block;
+}
+
+.campanhas h2 {
+    width: 300px;
+    font-family: "Open Sans", sans-serif;
+    color: #B20000;
+    background: #d9d9d9;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+}
+
+.btnSaibaEven{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    font-family: "Julius Sans One", sans-serif;
+    color: #ED1B1B;
+    background: white;
+    border: 1px solid #ED1B1B;
+    border-radius: 20px;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+}
+
+.btnSaibaEven:hover{
+    transition: .4s;
+    color: white;
+    background: #ED1B1B;
+    border: 1px solid white;
+}

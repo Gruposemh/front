@@ -1,0 +1,10 @@
+.conjuntoImg{
+    width: 40%;
+    height: 100vh;
+}
+.conjuntoImg img{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}

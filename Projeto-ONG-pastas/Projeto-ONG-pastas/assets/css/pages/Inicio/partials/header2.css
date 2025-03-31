@@ -1,0 +1,42 @@
+.acimaDaDobra {
+    background-image: url(../../../../images/pages/inicial/maosdadas.png);
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.sombra {
+    height: 500px;
+    width: 100%;
+    background-color: #080809;
+    opacity: 40%;
+    position: absolute;
+}
+
+.acimaDaDobra h1 {
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    font-family: "Julius Sans One", serif;
+    font-size: 60px;
+    margin-left: 50px;
+    text-shadow: 0px 10px 4px black;
+}
+
+.acimaDaDobra button {
+    position: relative;
+    font-size: 1.125rem;
+    z-index: 1;
+    display: inline-block;
+    width: 200px;
+    font-family: "Julius Sans One", sans-serif;
+    color: white;
+    background: #ED1B1B;
+    border: 1px solid #ED1B1B;
+    border-radius: 20px;
+    padding: 15px;
+    text-decoration: none;
+    top: 25%;
+    left: 10%;
+}

@@ -1,0 +1,69 @@
+.formulario{
+    text-align: center;
+    align-content: center;
+    margin-bottom: 20px;
+}
+.pInicial{
+    font-weight: bold;
+    font-family: "Lato", serif;
+    text-transform: uppercase;
+}
+.formulario h1{
+    color: #ff0000;
+    font-size: 40px;
+    font-family: "Lato", serif;
+    text-transform: uppercase;
+}
+input{
+    display: block;
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin: auto auto;
+    margin-top: 15px;
+    box-shadow: 2px 2px 4px rgb(187, 187, 187);
+}
+input:focus{
+    outline: none;
+}
+.btnEntrar{
+    color: red;
+    background: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid red;
+    font-weight: bold;
+    padding: 5px;
+    width: 200px;
+}
+.btnEntrar:hover{
+    color: white;
+    background: red;
+    transition: .4s;
+}
+.ouEntrar{
+    color: #a5a5a5;
+    font-weight: 00;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.apps{
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+}
+.icone{
+    border: 1px solid #bfbfbf;
+    border-radius: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    margin: 10px 5px;
+}
+.ouEntrar span{
+    color: red;
+    font-weight: 500;
+}
