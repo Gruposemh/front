@@ -11,7 +11,7 @@ header{
     height: 79px;
 }
 
-.nav-header ul{
+.nav-header .lista-header{
     display: flex;
     align-items: center;
     gap: 38.6px;
@@ -26,7 +26,46 @@ header{
 
 .nav-header  a:hover{
     text-decoration: overline 2px  var(--color-secondary);
+    color: var(--color-secondary);
 }
+
+
+.sobre-dropdown{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100%;
+    left: 675px;
+    background: rgba(128, 128, 128, 0.2);
+    backdrop-filter: blur(1px);
+    padding: 15px 20px;
+    width: 200px;
+}
+.sobre-dropdown li{
+    margin-bottom: 15px ;
+    transition: 0.5s;
+    color: var(--color-grey);
+    font-weight: 600;
+}
+.sobre-dropdown li:hover{
+    color: var(--color-secondary);
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+.sobre-dropdown.ativo{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition:  ease ;
+}
+.sobre-dropdown.inativo{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition:  ease ;
+}
+
 .header-buttons{
     display: flex;
     gap: 30px;
