@@ -27,6 +27,12 @@
 
 body{
     font-family: 'Inter';
+
+   
+}
+
+button{
+    outline: none;
 }
 
 .btn-primary{
@@ -49,4 +55,8 @@ body{
     border-radius: 15px;
     border: 1px solid var(--color-secondary) ;
     cursor:pointer;
+}
+
+li{
+     list-style: none;
 }
