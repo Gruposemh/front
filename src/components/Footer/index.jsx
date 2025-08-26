@@ -1,4 +1,8 @@
 import "./style.css";
+import LogoFooter from "../../assets/logo-footer.svg"
+import Instagram from "../../assets/logo-instagram.svg"
+import Facebook from "../../assets/logo-facebook.svg"
+import WhatsApp from "../../assets/logo-whatsapp.svg"
 
 const Footer = () => {
     return(
@@ -6,20 +10,21 @@ const Footer = () => {
             <Footer>
                 <div className="footer-infomacoes">
                     <div className="footer-logo">
-                        <img src={} alt="" loading="" title=""/>
+                        <img src={LogoFooter} alt="Logo dos Voluntarios Pro Bem, três bonequinhos, preto cinza e vermelho " loading="lazy" title="Logo Voluntários Pro Bem"/>
+                        <h2>voluntários pro bem </h2>
 
                         <div className="footer-social">
 
                             <div className="icon-social">
-                                <img src={} alt="" loading="" title="" />
+                                <img src={Instagram} alt="Logo Instagram branco com circulo branco" loading="lazy" title="Logo do Instagram" />
                             </div>
 
                             <div className="icon-social">
-                                <img src={} alt="" loading="" title="" />
+                                <img src={Facebook} alt="Logo Facebook branco com circulo branco" loading="lazy" title="Logo do Facebook" />
                             </div>
 
                             <div className="icon-social">
-                                <img src={} alt="" loading="" title="" />
+                                <img src={WhatsApp} alt="Logo WhatsApp branco com circulo branco" loading="lazy" title="Logo do WhatsApp" />
                             </div>
                             
                         </div>
@@ -29,7 +34,7 @@ const Footer = () => {
 
                     <div className="footer-nav">
                         <div className="footer-container">
-                            <h2>Sobre</h2>
+                            <h3>Sobre</h3>
 
                             <nav>
                                 <ul className="footer-links">
@@ -42,7 +47,7 @@ const Footer = () => {
                         </div>
 
                         <div className="footer-container">
-                            <h2>Ajuda</h2>
+                            <h3>Ajuda</h3>
 
                             <nav>
                                 <ul className="footer-links">
@@ -52,7 +57,7 @@ const Footer = () => {
                         </div>
 
                         <div className="footer-container">
-                            <h2>Termos</h2>
+                            <h3>Termos</h3>
 
                             <nav>
                                 <ul className="footer-links">
@@ -66,8 +71,7 @@ const Footer = () => {
                     </div>
 
                     <div className="copyright">
-                        <img src={} alt="" />
-                        <h3>© 2025 Voluntários Torcendo Pro Bem.</h3>
+                        <p>&copy 2025 Voluntários Torcendo Pro Bem.</p>
                     </div>
 
                 </div>
