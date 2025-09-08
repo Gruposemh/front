@@ -1,8 +1,8 @@
-import "./style.css";
-import LogoFooter from "../../assets/Logo-footer.svg";
-import Instagram from "../../assets/logo-instagram.svg";
-import Facebook from "../../assets/logo-facebook.svg";
-import WhatsApp from "../../assets/logo-whatsapp.svg";
+import "../../styles/Footer/style.css";
+import LogoFooter from "../../assets/Footer/Logo-footer.svg";
+import Instagram from "../../assets/Footer/logo-instagram.svg";
+import Facebook from "../../assets/Footer/logo-facebook.svg";
+import WhatsApp from "../../assets/Footer/logo-whatsapp.svg";
 
 const Footer = () => {
     return (
