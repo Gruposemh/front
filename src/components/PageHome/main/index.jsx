@@ -1,5 +1,7 @@
 import integrantes from "../../../assets/Home/integrantes.png"
 import "../../../styles/Home/main/style.css"
+import Title from "../../Title";
+import CardAtividades from "../../Cards/CardAtividades"
 
 const Main = () => {
     return(
@@ -10,6 +12,7 @@ const Main = () => {
                         <h1>Fazer o bem <br /> faz muito <br /> bem!</h1>
                         <p>A ONG Voluntários Torcendo para o Bem atua há anos fazendo o bem para a comunidade local, promovendo eventos e campanhas em prol da população. Venha fazer parte desse movimento!</p>
                         <button className="btn-primary">Quero ser um voluntário</button>
+                      
                     </article>
                     <div className='img-integrantes'>
                         <img src={integrantes} alt="Integrantes da ONG" />
