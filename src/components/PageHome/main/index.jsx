@@ -1,7 +1,6 @@
 import integrantes from "../../../assets/Home/integrantes.png"
 import "../../../styles/Home/main/style.css"
-import Title from "../../Title";
-import CardAtividades from "../../Cards/CardAtividades"
+import Button from "../../Button";
 
 const Main = () => {
     return(
@@ -11,7 +10,7 @@ const Main = () => {
                     <article className='voluntario'>
                         <h1>Fazer o bem <br /> faz muito <br /> bem!</h1>
                         <p>A ONG Voluntários Torcendo para o Bem atua há anos fazendo o bem para a comunidade local, promovendo eventos e campanhas em prol da população. Venha fazer parte desse movimento!</p>
-                        <button className="btn-primary">Quero ser um voluntário</button>
+                        <Button text="Quero ser um voluntário" primary={true}/>
                       
                     </article>
                     <div className='img-integrantes'>
