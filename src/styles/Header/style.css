@@ -71,10 +71,4 @@ header{
     gap: 30px;
 }
 
-.header-buttons .btn-secondary{
-    border: 1px solid transparent;
-}
-.header-buttons .btn-secondary:hover{
-    border: 1px solid var(--color-secondary);
-}
 

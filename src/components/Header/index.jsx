@@ -1,16 +1,13 @@
 import "../../styles/Header/style.css"
 import { useState } from "react"
 import Logo from "../../assets/Logos/Logo.svg";
+import Button from "../Button";
 
 const Header = () => {
 
     const [aberto, setAberto] = useState(false); 
-   
 
-    const [botaoClicado, setBotaoClicado] = useState(false);
 
-    const handleMouseEnter = () => setBotaoClicado(true);
-    const handleMouseLeave = () => setBotaoClicado(false); 
 
     function DropdownItem(props){
         return(
@@ -63,11 +60,9 @@ const Header = () => {
             </nav>
              
             <div className="header-buttons">
-                <button className={`btn-primary ${botaoClicado ? 'btn-secondary' : ''}`}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave} 
-                >Doe agora</button>
-                <button className='btn-secondary' >Cadastrar-se →</button>
+                <Button text= "Doe Agora" primary={true}/>
+                <Button text= "Cadastrar-se →" primary={false}/>
+                
             </div>
         </header>
         
