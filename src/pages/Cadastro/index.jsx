@@ -9,7 +9,7 @@ export default function Cadastro(){
         <>
         <div className="formulario-container">
             <CapaCadastro title={"Quem ajuda transforma vidas"} img={capa}/>
-            <CardCadastro />
+            <CardCadastro title={"Cadastrar-se"} action={"Cadastrar-se"}/>
         </div>
         </>
     )
