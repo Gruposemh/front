@@ -1,23 +1,22 @@
 import React from "react";
 import "../../../styles/Cards/CardEventos/style.css"
 import Button from "../../Button"
-import teste from "../../../assets/Eventos/teste.png"
+
 import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
-const Card = ({img, titulo, local, data}) => {
+const CardEventos = ({img, titulo, local, data}) => {
     return (
         <>
         <div className="card-container">
-            <img src={teste} />
+            <img src={img} />
             <div className="card-info">
-                <h1>Evento de Natal</h1>
+                <h2>{titulo}</h2>
                     <div className="endereco">
                         <p>
-                            <FaMapMarkerAlt style={{ marginRight: "8px" }} />
-                            São Mateus, Zona Leste, SP</p>
+                            <FaMapMarkerAlt style={{ marginRight: "8px" }} />{local}</p>
                         <p> 
                             <FaCalendarAlt style={{ marginRight: "8px" }} />
-                            20/12/2025</p>
+                            {data}</p>
                     </div>
                 <Button text={"Saiba mais"}/>
             </div>
@@ -26,4 +25,4 @@ const Card = ({img, titulo, local, data}) => {
     )
 }
 
-export default Card;
+export default CardEventos;
