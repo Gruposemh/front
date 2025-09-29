@@ -2,6 +2,7 @@ import "../../styles/Header/style.css"
 import { useState } from "react";
 import Logo from "../../assets/Logos/Logo.svg";
 import Button from "../Button";
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
@@ -19,7 +20,7 @@ const Header = () => {
 
     <nav className="nav-header">
       <ul className="lista-header">
-        <li><a href="#">Eventos</a></li>
+        <li><Link to="/eventos">Eventos</Link></li>
 
         <li
           className="menu-item-com-dropdown"
@@ -31,16 +32,16 @@ const Header = () => {
           {/* dropdown controlado */}
           <div className={`sobre-dropdown ${aberto ? "ativo" : "inativo"}`}>
             <ul className="lista-dropdown">
-              <li><a href="#" className="drop-item">Nossa História</a></li>
-              <li><a href="#" className="drop-item">Linha do Tempo</a></li>
-              <li><a href="#" className="drop-item">Equipe</a></li>
-              <li><a href="#" className="drop-item">Projetos</a></li>
+              <li><Link to="/nossa-historia" className="drop-item">Nossa História</Link></li>
+              <li><Link to="/linha-do-tempo" className="drop-item">Linha do Tempo</Link></li>
+              <li><Link to="/equipe" className="drop-item">Equipe</Link></li>
+              <li><Link to="/projetos" className="drop-item">Projetos</Link></li>
             </ul>
           </div>
         </li>
 
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Como Ajudar</a></li>
+        <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/como-ajudar">Como Ajudar</Link></li>
       </ul>
     </nav>
   
