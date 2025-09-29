@@ -1,16 +1,23 @@
-
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home";
-import Eventos from "./pages/Eventos"
-import ComoAjudar from "./pages/ComoAjudar"
-import Cadastro from "./pages/Cadastro"
-import Login from "./pages/Login"
+import Eventos from "./pages/Eventos";
+import Cadastro from "./pages/Cadastro";
 
 const App = () => {
   return (
     <>
-      <Cadastro/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/eventos" element={<Eventos/>}/>
+        <Route path="/cadastrar-se" element={<Cadastro/>}/>
+       {/* <Route path="/" element={<ComoAjudar/>}/>
+        <Route path="/" element={<Login/>}/>
+        <Route path="/" element={<SobreNos/>}/>
+        <Route path='/*'element={ <NotFound/> }/> */}
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
