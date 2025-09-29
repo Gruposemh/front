@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from "react";
 import Header from "../../components/Header"
 import Main from "../../components/Main";
@@ -18,14 +18,3 @@ export default function Eventos() {
         </>
     )
 }
-=======
-
-const Eventos = () =>{
-    return(
-        <>
-        <h1>Página de Eventos</h1>
-        </>
-    )
-}
-export default Eventos;
->>>>>>> ac6ae1932b04b6fcea2a955954b0cec4d88c1bd2
