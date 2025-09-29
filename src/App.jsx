@@ -6,11 +6,12 @@ import Eventos from "./pages/Eventos"
 import ComoAjudar from "./pages/ComoAjudar"
 import Cadastro from "./pages/Cadastro"
 import Login from "./pages/Login"
+import Tarefas from './pages/Tarefas'
 
 const App = () => {
   return (
     <>
-      <Login />
+      <Tarefas />
     </>
   )
 }

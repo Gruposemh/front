@@ -1,0 +1,12 @@
+.section-agenda{
+    background: var(--color-grey-light);
+}
+
+.agenda-tarefas{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    font-size: 1.5rem;
+    color: var(--color-grey);
+}
