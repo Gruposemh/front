@@ -19,7 +19,7 @@ export default function SectionPlanos() {
                     </div>
                     <div className="doe-agora">
                         <p>Doe agora</p>
-                        <h3>Escolha um valor <br /> fixo para doar<br /> mensalmente</h3>
+                        <h3>Faça sua doação agora mesmo</h3>
                         <button>Continue</button>
                     </div>
                 </div>
