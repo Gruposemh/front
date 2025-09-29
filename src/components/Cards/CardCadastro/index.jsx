@@ -26,18 +26,23 @@ const CardCadastro = ({ title, action}) => {
                         </div>
                     </div>
                     <Button text={action}/>
-                    <p>ou faça login com</p>
-                    <div className="opcoes-login">
-                         <button className="social-btn facebook">
-                            <img src={facebook} />
-                        </button>
-                        <button className="social-btn google">
-                            <img src={google} />
-                        </button>
-                        <button className="social-btn apple">
-                            <img src={apple} />
-                        </button>
-                    </div>
+                    
+                    {title !== "Login" ? (
+                        <div className="opcoes-login">
+                            <p>ou faça login com</p>
+                            <button className="social-btn facebook">
+                                <img src={facebook} />
+                            </button>
+                            <button className="social-btn google">
+                                <img src={google} />
+                            </button>
+                            <button className="social-btn apple">
+                                <img src={apple} />
+                            </button>
+                        </div>
+                    ) : (
+                        <p className="criar-conta">não tem uma conta? <span> Cadastre-se aqui </span></p>
+                    )}
                 </div>
             </div>
         </>
