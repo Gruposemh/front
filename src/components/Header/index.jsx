@@ -10,14 +10,10 @@ const Header = () => {
     return(
         <>
         <header>
+          <Link to="/">
             <img src={Logo} alt="Logo dos Voluntarios Pro Bem, três bonequinhos, preto cinza e vermelho" className="logo" />
-
+        </Link>
            
-
-
-
-
-
     <nav className="nav-header">
       <ul className="lista-header">
         <li><Link to="/eventos">Eventos</Link></li>
