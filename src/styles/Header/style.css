@@ -43,6 +43,7 @@ a.drop-item:hover{
   backdrop-filter: blur(1px);
   padding: 15px 20px;
   width: 200px;
+  border-radius: 5px;
 
   /* estado inicial */
   opacity: 0;

@@ -3,7 +3,7 @@ import LogoFooter from "../../assets/Footer/Logo-footer.svg";
 import Instagram from "../../assets/Footer/logo-instagram.svg";
 import Facebook from "../../assets/Footer/logo-facebook.svg";
 import WhatsApp from "../../assets/Footer/logo-whatsapp.svg";
-
+import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <>
@@ -64,10 +64,11 @@ const Footer = () => {
 
                             <nav>
                                 <ul className="footer-links">
-                                    <li><a href="#" className="footer-item">Eventos</a></li>
-                                    <li><a href="#" className="footer-item">Sobre Nós</a></li>
-                                    <li><a href="#" className="footer-item">Blog</a></li>
-                                    <li><a href="#" className="footer-item">Como Ajudar</a></li>
+                                    <li><Link to="/home" className="footer-item">Home</Link></li>
+                                    <li><Link to="/eventos" className="footer-item">Eventos</Link></li>
+                                    <li><Link to="/sobre-nos" className="footer-item">Sobre Nós</Link></li>
+                                    <li><Link to="/blog" className="footer-item">Blog</Link></li>
+                                    <li><Link to="/como-ajudar" className="footer-item">Como Ajudar</Link></li>
                                 </ul>
                             </nav>
                         </div>
@@ -77,7 +78,7 @@ const Footer = () => {
 
                             <nav>
                                 <ul className="footer-links">
-                                    <li><a href="#" className="footer-item">Fale Conosco</a></li>
+                                    <li><Link to="/fale-conosco" className="footer-item">Fale Conosco</Link></li>
                                 </ul>
                             </nav>
                         </div>
@@ -87,8 +88,8 @@ const Footer = () => {
 
                             <nav>
                                 <ul className="footer-links termos">
-                                    <li><a href="#" className="footer-item">Política de Privacidade</a></li>
-                                    <li><a href="#"  className="footer-item">Termos de Serviço</a></li>
+                                    <li><Link to="/politica-privacidade" className="footer-item">Política de Privacidade</Link></li>
+                                    <li><Link to="/termos-servico" className="footer-item">Termos de Serviço</Link></li>
                                 </ul>
                             </nav>
                         </div>
