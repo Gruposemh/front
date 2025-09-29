@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade'
+import { Link } from "react-router-dom"
 
 const CarrosselSection = () =>{
 
@@ -54,10 +55,11 @@ const CarrosselSection = () =>{
                         <div className="swiper-pagination"></div>
                     </Swiper>
                 </div>
+                <Link to="/sobre-nos">
                <Button 
                 text= "Conheça nossa história"
                 primary={true}/>
-                
+                </Link>
             </div>
             
         </section>
