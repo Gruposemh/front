@@ -51,9 +51,12 @@ const Header = () => {
 
              
             <div className="header-buttons">
+              <Link to="/doe-agora">
                 <Button text= "Doe Agora" primary={true}/>
+              </Link>
+              <Link to="/cadastrar-se">
                 <Button text= "Cadastrar-se →" primary={false}/>
-                
+              </Link>
             </div>
         </header>
         
