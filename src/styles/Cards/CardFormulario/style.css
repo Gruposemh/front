@@ -9,8 +9,62 @@
 .card-formulario{
     display: flex;
     flex-direction: column;
+    width: 600px;
+    height: 550px;
     align-items: center;
-    background: rgb(255, 137, 137);
-    padding: 20px;
+    padding: 20px 50px;
+    background: var(--color-white);
+    border-radius: 20px;
 }
 
+.inputs{
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input input{
+    border: 1px solid var(--color-grey-light);
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+}
+
+.input label{
+    color: var(--color-grey);
+}
+
+.card-formulario h1{
+    color: var(--color-secondary);
+    font-size: 2.5rem;
+}
+
+.opcoes-login{
+    text-align: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.opcoes-login button{
+    margin: 5px;
+    width: 30px;
+    font-size: 2rem;
+    background: none;
+}
+
+.criar-conta {
+    padding-top: 50px;
+}
+
+.criar-conta span{
+    font-weight: bold;
+    color: var(--color-secondary);
+}

@@ -1,3 +1,4 @@
+import React from "react";
 import "../../styles/Header/style.css"
 import { useState } from "react";
 import Logo from "../../assets/Logos/Logo.svg";
@@ -5,6 +6,7 @@ import Button from "../Button";
 import { Link } from 'react-router-dom'
 
 const Header = () => {
+
 
      const [aberto, setAberto] = useState(false);
     return(
@@ -23,7 +25,8 @@ const Header = () => {
           onMouseEnter={() => setAberto(true)}
           onMouseLeave={() => setAberto(false)}
         >
-          <a href="#">Sobre Nós ▾</a>
+          
+          <li><Link to="/sobre">Sobre Nós ▾</Link></li>
 
           {/* dropdown controlado */}
           <div className={`sobre-dropdown ${aberto ? "ativo" : "inativo"}`}>
@@ -47,7 +50,7 @@ const Header = () => {
 
              
             <div className="header-buttons">
-              <Link to="/doe-agora">
+              <Link to="/como-ajudar">
                 <Button text= "Doe Agora" primary={true}/>
               </Link>
               <Link to="/cadastrar-se">
@@ -59,5 +62,6 @@ const Header = () => {
         </>
 
     )
+
 }
 export default Header;
