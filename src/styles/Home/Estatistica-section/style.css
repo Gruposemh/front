@@ -1,6 +1,6 @@
 .parallax {
   background-image: url("../../../assets/Home/parallax.svg");
-  height: 50vh;
+  height: 401px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,12 +8,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .parallax h2{
     color: white;
     text-transform: uppercase;
     text-align: start;
+    margin-left: 10px;
 }
 
 .dados-estatisticos{
@@ -23,6 +25,7 @@
     width: 70%;
     gap: 100px;
     color: white;
+    font-size: 48px;
 }
 
 .dado{
