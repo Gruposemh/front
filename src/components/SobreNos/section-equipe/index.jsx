@@ -2,11 +2,14 @@ import React from "react";
 import Title from "../../Title";
 import presidente from "../../../assets/SobreNos/presidente.png"
 import "../../../styles/SobreNos/section-equipe/style.css"
+import AnimatedSection from "../../AnimatedSection";
 
 export default function SectionEquipe() {
     return (
         <>
             <Title title={"Equipe"} />
+
+            <AnimatedSection delay={0.4}>
 
             <section className="container-equipe">
                 <div>
@@ -15,6 +18,7 @@ export default function SectionEquipe() {
 
                     <img src={presidente} />
             </section>
+            </AnimatedSection>
         </>
     )
 };

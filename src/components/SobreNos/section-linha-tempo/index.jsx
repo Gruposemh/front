@@ -9,11 +9,13 @@ import card2 from "../../../assets/SobreNos/card2.png"
 import card3 from "../../../assets/SobreNos/card3.png"
 import card4 from "../../../assets/SobreNos/card4.png"
 import card5 from "../../../assets/SobreNos/card5.png"
+import AnimatedSection from "../../AnimatedSection";
 
 export default function SectionLinhaTempo() {
     return (
         <section className="section-tempo">
             <Title title={"Linha do tempo"} />
+    
             <div className="lista-acontecimentos">
                 <Card
                     ano={2015}
@@ -51,6 +53,7 @@ export default function SectionLinhaTempo() {
                     invertido={false}
                 />
             </div>
+         
         </section>
     )
 };
