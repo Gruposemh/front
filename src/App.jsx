@@ -7,11 +7,12 @@ import ComoAjudar from "./pages/ComoAjudar"
 import Cadastro from "./pages/Cadastro"
 import Login from "./pages/Login"
 import Tarefas from './pages/Tarefas'
+import TornarVoluntario from "./pages/TornarVoluntario";
 
 const App = () => {
   return (
     <>
-      <Tarefas />
+      <TornarVoluntario />
     </>
   )
 }
