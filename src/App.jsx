@@ -8,11 +8,12 @@ import Cadastro from "./pages/Cadastro"
 import Login from "./pages/Login"
 import Tarefas from './pages/Tarefas'
 import TornarVoluntario from "./pages/TornarVoluntario";
+import SobreNos from "./pages/SobreNos";
 
 const App = () => {
   return (
     <>
-      <TornarVoluntario />
+      <SobreNos />
     </>
   )
 }

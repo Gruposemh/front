@@ -1,0 +1,20 @@
+import React from "react";
+import Title from "../../Title";
+import presidente from "../../../assets/SobreNos/presidente.png"
+import "../../../styles/SobreNos/section-equipe/style.css"
+
+export default function SectionEquipe() {
+    return (
+        <>
+            <Title title={"Equipe"} />
+
+            <section className="container-equipe">
+                <div>
+                    <p>Marco Aurélio de Freitas Silvestre é o criador e Presidente da ONG, junto com sua esposa Luciane Dabrins vice-presidente</p>
+                </div>
+
+                    <img src={presidente} />
+            </section>
+        </>
+    )
+};
