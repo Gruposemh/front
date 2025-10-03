@@ -1,79 +1,114 @@
-.planos-container {
+.section-planos{
     background-color: var(--color-grey-light);
-    padding-bottom: 80px;
-}
-
-.planos-container h1{
+    padding: 50px 120px;
     text-align: center;
-    padding: 30px;
 }
 
-.planos{
+.section-planos h2{
+    font-size: 40px;
+    color: var(--color-black);
+    text-transform: uppercase;
+}
+
+
+.planos-container{
     display: flex;
-    justify-content: space-evenly;
-    align-items: start;
-    padding-top: 50px;
-    width: 70%;
-    justify-self: center;
-}
+    justify-content:  start;
+    text-align: start;
+    align-items: center;
+    gap: 38px;
+    margin-top: 59px;
+   }
 
-.ser-voluntario{
-    font-size: 2rem;
-}
+   .planos-container h3{
+    font-size: 28px;
+    font-weight: 600;
+    width: 332px;
+    margin-bottom: 36px;
+   }
 
-.mensal {
+.cards-doacao{
+    display: flex;
+    gap: 23px;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .mensal{
     background-color: var(--color-white);
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
+    padding: 31px 27px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-}
+    transition: 0.4s ease-in-out;
+    box-shadow: 4px 7px 8px 0px rgba(0, 0, 0, 0.22);
+   }
 
-.mensal p {
-    font-weight: bold;
-}
-
-.mensal h3 {
-    color: var(--color-secondary);
-    width: 100%;
-    padding-bottom: 50px;
-}
-
-.doe-agora{
-    background-color: var(--color-white);
-    margin-top: 20px;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.doe-agora p {
-    font-weight: bold;
-}
-
-.doe-agora button {
-    border: 1px solid transparent;
-    padding: 10px;
-    background-color: var(--color-grey-medium);
-    border-radius: 10px;
-    justify-self: center;
+    .mensal:hover{
+    transform: translateY(-10px);
+   }
+   .mensal p{
+    font-size: 20px;
     font-weight: 800;
-}
+    color: var(--color-black);
+    margin-bottom: 52px;
+   }
+   .mensal h4{
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--color-secondary);
+    width: 294px;
+    margin-bottom: 23.5px;
+   }
+   .mensal button{
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 13.5px 95px;
+    margin-bottom: 39px;
+    
+   }
 
-.doe-agora h3{
-    width: 100%;
-    padding-bottom: 50px;
-}
 
-.doe-agora button:hover{
+
+   .doe-agora{
+    background-color: var(--color-white);
+    padding: 24px 37px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 7px 8px 0px rgba(0, 0, 0, 0.22);
+    transition: 0.4s ease-in-out;
+   }
+   .doe-agora:hover{
+    transform: translateY(-10px);
+   }
+   .doe-agora p{
+     font-size: 20px;
+    font-weight: 800;
+    color: var(--color-black);
+    margin-bottom: 55px;
+   }
+
+   .doe-agora h5{
+    font-size: 32px;
+    font-weight: 800;
+    width: 274px;
+    margin-bottom: 48px;
+   }
+
+   .doe-agora button{
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--color-grey) ;
+    padding: 11.5px 95px;
+    margin-bottom: 24px;
+    color: var(--color-white);
+   }
+   .doe-agora button:hover{
     background: none;
-    border: 1px solid var(--color-grey-medium);
-}
-
-.mensal:hover, .doe-agora:hover{
-    scale: 1.125;
-    transition: 1s;
-}
+    color: var(--color-grey);
+    border: 1px solid var(--color-grey);
+    cursor: pointer;
+   }
+    
