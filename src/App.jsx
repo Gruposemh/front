@@ -12,6 +12,7 @@ import SobreNos from "./pages/SobreNos";
 import Blog from "./pages/Blog";
 
 
+
 const App = () => {
   return (
     <>
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/tarefas" element={<Tarefas/>}/>
         <Route path="/voluntario" element={<TornarVoluntario/>}/>
         <Route path="/blog" element={<Blog/>}/>
+        <Route path="/login" element={<Login />} />  
        {/*  <Route path='/*'element={ <NotFound/> }/>  */}
         </Routes>
       
