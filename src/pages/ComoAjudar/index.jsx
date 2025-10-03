@@ -12,7 +12,6 @@ export default function ComoAjudar() {
         <>
             <Header />
             <Main img={img_main} text={"Como Ajudar"} />
-            <Title title={"Faça a Difereça"} />
             <SectionDoe />
             <SectionPlanos />
             <Footer />
