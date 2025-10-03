@@ -13,7 +13,7 @@
 
 .planos-container{
     display: flex;
-    justify-content:  start;
+    justify-content:  center;
     text-align: start;
     align-items: center;
     gap: 38px;
