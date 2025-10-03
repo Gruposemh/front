@@ -5,7 +5,11 @@ import facebook from "../../../assets/CardCadastro/facebook.png"
 import google from "../../../assets/CardCadastro/google.png"
 import apple from "../../../assets/CardCadastro/apple.png"
 
+
+import { useNavigate } from "react-router-dom";
+
 const CardCadastro = ({ title, action}) => {
+    const navigate = useNavigate();
     return (
         <>
             <div className="background-card">
@@ -14,7 +18,7 @@ const CardCadastro = ({ title, action}) => {
                     <div className="inputs">
                         <div className="input">
                             <label htmlFor="nome">Nome completo</label>
-                            <input type="text" name="nome" />
+                            <input type="text" name="nome"   required/>
                         </div>
                         <div className="input">
                             <label htmlFor="email">E-mail</label>
@@ -29,8 +33,12 @@ const CardCadastro = ({ title, action}) => {
                     
                     {title !== "Login" ? (
                         <div className="opcoes-login">
-                            <p>ou faça login com</p>
-                            <button className="social-btn facebook">
+                            <p className="criar-conta">
+  já tem uma conta?
+  <span onClick={() => navigate("/login")}> Faça login </span>
+</p>
+                        <div className="social-buttons">
+                             <button className="social-btn facebook">
                                 <img src={facebook} />
                             </button>
                             <button className="social-btn google">
@@ -40,8 +48,13 @@ const CardCadastro = ({ title, action}) => {
                                 <img src={apple} />
                             </button>
                         </div>
+                           
+                        </div>
                     ) : (
-                        <p className="criar-conta">não tem uma conta? <span> Cadastre-se aqui </span></p>
+                         <p className="criar-conta">
+                      não tem uma conta?
+                      <span onClick={() => navigate("/cadastrar-se")}> Cadastre-se aqui </span>
+                    </p>
                     )}
                 </div>
             </div>

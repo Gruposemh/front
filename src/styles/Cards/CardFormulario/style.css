@@ -1,4 +1,5 @@
 .background-card{
+    
     background: var(--color-grey-light);
     width: 80%;
     display: flex;
@@ -10,9 +11,9 @@
     display: flex;
     flex-direction: column;
     width: 600px;
-    height: 550px;
+    
     align-items: center;
-    padding: 20px 50px;
+    padding: 69px 90px;
     background: var(--color-white);
     border-radius: 20px;
 }
@@ -50,7 +51,7 @@
 .opcoes-login{
     text-align: center;
     gap: 20px;
-    padding-top: 20px;
+    
 }
 
 .opcoes-login button{
@@ -60,11 +61,23 @@
     background: none;
 }
 
+
 .criar-conta {
-    padding-top: 50px;
+    margin-top: 14px;
+    
+}
+.criar-conta:hover{
+    cursor: pointer;
+    font-weight: 700;
 }
 
 .criar-conta span{
     font-weight: bold;
     color: var(--color-secondary);
+}
+
+.social-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
