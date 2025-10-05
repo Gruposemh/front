@@ -29,6 +29,7 @@ const App = () => {
         <Route path="/voluntario" element={<TornarVoluntario/>}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/login" element={<Login />} />  
+        <Route path="/quero-ser-voluntario" element={<TornarVoluntario />} />  
        {/*  <Route path='/*'element={ <NotFound/> }/>  */}
         </Routes>
       
