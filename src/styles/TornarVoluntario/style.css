@@ -65,8 +65,8 @@
 }
 
 .btn-voluntario:hover {
-  background-color: var(--color-white);
-  color: var(--color-secondary);
-  border: 1px solid var(--color-secondary);
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
 }
 
