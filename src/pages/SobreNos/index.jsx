@@ -8,15 +8,19 @@ import SectionEquipe from "../../components/SobreNos/section-equipe";
 import img_sobreNos from "../../assets/SobreNos/sobreNos.png"
 import SectionHistoria from "../../components/SobreNos/section-historia";
 
+import { useSmoothScroll } from "../../components/Hooks/useSmoothScroll";
+
 export default function SobreNos() {
+useSmoothScroll();
+
     return (
         <>
             <Header />
             <Main img={img_sobreNos} text={"Sobre nós"}/>
-            <SectionHistoria/>
-            <SectionLinhaTempo />
-            <SectionPilares />
-            <SectionEquipe />
+            <SectionHistoria id="nossa_historia"/>
+            <SectionLinhaTempo id="linha-do-tempo"/>
+            <SectionPilares id="projetos"/>
+            <SectionEquipe id="equipe"/>
             <Footer />
         </>
     )

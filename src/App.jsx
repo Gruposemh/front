@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home";
-
 import Eventos from "./pages/Eventos";
 import Cadastro from "./pages/Cadastro";
 import ComoAjudar from "./pages/ComoAjudar"
@@ -11,13 +10,9 @@ import TornarVoluntario from "./pages/TornarVoluntario";
 import SobreNos from "./pages/SobreNos";
 import Blog from "./pages/Blog";
 
-
-
 const App = () => {
   return (
     <>
-
-    
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/eventos" element={<Eventos/>}/>
@@ -31,9 +26,8 @@ const App = () => {
         <Route path="/login" element={<Login />} />  
         <Route path="/quero-ser-voluntario" element={<TornarVoluntario />} />  
        {/*  <Route path='/*'element={ <NotFound/> }/>  */}
+       
         </Routes>
-      
-
     </>
   )
 }

@@ -4,6 +4,8 @@ header{
     align-items: center;
     gap: 170px;
     margin-top: 20px;
+    position: relative; /* Adicionei */
+    z-index: 1000; /* Adicionei - garante que o header fique acima do conteúdo */
 }
 
 .logo{
@@ -16,6 +18,7 @@ header{
     align-items: center;
     gap: 38.6px;
     list-style: none;
+    position: relative; /* Adicionei */
 }
 
 .nav-header a {
@@ -31,26 +34,26 @@ header{
 a.drop-item:hover{
     text-decoration: none;
 }
+
 .menu-item-com-dropdown {
   position: relative;
+  z-index: 1001; /* Adicionei - mais alto que o header */
 }
 
 .sobre-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
-  background: rgba(128, 128, 128, 0.2);
-  backdrop-filter: blur(1px);
+  background: #e4e4e4; /* Cinza escuro sólido */
   padding: 15px 20px;
   width: 200px;
   border-radius: 5px;
+  z-index: 1002;
 
   /* estado inicial */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
-
-  /* animação suave */
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
@@ -86,13 +89,7 @@ a.drop-item:hover{
   transform: translateY(-20px);
 }
 
-
-
 .header-buttons{
     display: flex;
     gap: 30px;
 }
-
-
-
-
