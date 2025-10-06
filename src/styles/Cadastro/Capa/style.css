@@ -1,3 +1,7 @@
+.cadastro{
+     background-color: var(--color-grey-light);
+}
+
 .capa-container{
     display: flex;
     flex-direction: column;
@@ -5,7 +9,8 @@
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    width: 25%;
+    width: 501px;
+    border-radius: 0 20px 20px 0;
     position: relative;
     overflow: hidden;
 }
@@ -32,6 +37,7 @@
 }
 
 .overlay{
+    background-color: var(--color-grey-light);  
     position: absolute;
     top: 0;
     left: 0;

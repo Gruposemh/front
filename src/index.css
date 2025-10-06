@@ -47,7 +47,7 @@ button{
 }
 
 .btn-secondary{
-    background: none;
+    background: transparent;
     color: var(--color-secondary);
     padding: 9.5px 16px;
     font-weight: 700;

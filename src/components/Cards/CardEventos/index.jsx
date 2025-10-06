@@ -7,19 +7,22 @@ import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 const CardEventos = ({img, titulo, local, data}) => {
     return (
         <>
-        <div className="card-container">
+        <div className="cardEventos-container">
             <img src={img} />
-            <div className="card-info">
+            <div className="cardEventos-info">
                 <h2>{titulo}</h2>
-                    <div className="endereco">
+                    <div className="dados-evento">
                         <p>
-                            <FaMapMarkerAlt style={{ marginRight: "8px" }} />{local}</p>
+                            <FaMapMarkerAlt className="endereco" style={{ marginRight: "8px" }} />{local}</p>
                         <p> 
-                            <FaCalendarAlt style={{ marginRight: "8px" }} />
+                            <FaCalendarAlt className="data" style={{ marginRight: "8px" }} />
                             {data}</p>
+                            <Button text={"Saiba mais"} primary={true}/>
                     </div>
-                <Button text={"Saiba mais"}/>
+                    
+                
             </div>
+            
         </div>
         </>
     )

@@ -5,7 +5,8 @@ import logo from "../../../assets/Logos/logo.svg"
 const CapaCadastro = ({title, img}) => {
     return (
         <>
-            <div className="capa-container">
+        <main className="cadastro">
+              <div className="capa-container">
                 <img src={img} className="fundo" />
                 <div className="overlay"></div>
                 <div className="cabecalho">
@@ -14,6 +15,8 @@ const CapaCadastro = ({title, img}) => {
                 </div>
                 <h1>{title}</h1>
             </div>
+        </main>
+          
         </>
     )
 }
