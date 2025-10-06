@@ -2,6 +2,7 @@ import CardBlog from "../../Cards/CardsBlog";
 import Title from "../../Title";
 import "../../../styles/Blog/section-blog/style.css"
 import Dentista from "../../../assets/Blog/image-blog.svg"
+import { Link } from "react-router-dom";
 
 const SectionBlog = () => {
     return(
@@ -9,7 +10,9 @@ const SectionBlog = () => {
         <section className="section-blog">
             <Title title="Notícias"/>
             <div className="blog-container">
-                <button id="btn-blog">+ Adicionar notícia ao blog</button>
+                <Link to="/adicionar-noticia" id="btn-blog" className="btn-link">
+                + Adicionar notícia ao blog
+                 </Link>
                 <div className="cards-blog">
                     <CardBlog 
                     img={Dentista}
