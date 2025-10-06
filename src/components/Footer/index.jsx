@@ -6,10 +6,18 @@ import WhatsApp from "../../assets/Footer/logo-whatsapp.svg";
 import { Link } from 'react-router-dom';
 
 import { UseModal, Modal, ModalContent, TermosContent, PrivacidadeContent } from '../Modais/ModalTermos';
+import { UseModalContato, ModalContato } from '../Modais/ModalContato';
+
 
 const Footer = () => {
+   const modalContato = UseModalContato();
   const modalTermos = UseModal();
   const modalPrivacidade = UseModal();
+
+    const handleContatoClick = (e) => { 
+    e.preventDefault();
+    modalContato.open();
+  };
 
   const handleTermosClick = (e) => {
     e.preventDefault();
@@ -20,6 +28,7 @@ const Footer = () => {
     e.preventDefault();
     modalPrivacidade.open();
   };
+  
 
   return (
     <>
@@ -34,16 +43,36 @@ const Footer = () => {
             />
 
             <div className="footer-social">
-              <div className="icon-social">
-                <img src={Instagram} alt="Logo Instagram" loading="lazy" />
-              </div>
-              <div className="icon-social">
-                <img src={Facebook} alt="Logo Facebook" loading="lazy" />
-              </div>
-              <div className="icon-social">
-                <img src={WhatsApp} alt="Logo WhatsApp" loading="lazy" />
-              </div>
-            </div>
+  <div className="icon-social">
+    <a 
+      href="https://www.instagram.com/voluntariosprobem?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img src={Instagram} alt="Logo Instagram" loading="lazy" />
+    </a>
+  </div>
+
+  <div className="icon-social">
+    <a 
+      href="https://www.facebook.com/voluntariosprobem" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img src={Facebook} alt="Logo Facebook" loading="lazy" />
+    </a>
+  </div>
+
+  <div className="icon-social">
+    <a 
+      href="https://w.app/axj1qg" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img src={WhatsApp} alt="Logo WhatsApp" loading="lazy" />
+    </a>
+  </div>
+</div>
 
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.592385615283!2d-46.50071362378758!3d-23.583078762392123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6798f49c77cd%3A0xaca086453fcbeab6!2sPra%C3%A7a%20Cataguarino!5e0!3m2!1spt-BR!2sbr!4v1756140515023!5m2!1spt-BR!2sbr" 
@@ -74,7 +103,15 @@ const Footer = () => {
               <h3>Ajuda</h3>
               <nav>
                 <ul className="footer-links">
-                  <li><Link to="/fale-conosco" className="footer-item">Fale Conosco</Link></li>
+                   <li>
+                <a 
+                  href="/fale-conosco" 
+                  onClick={handleContatoClick}
+                  className="footer-item"
+                >
+                  Fale Conosco
+                </a>
+              </li> 
                 </ul>
               </nav>
             </div>
@@ -104,6 +141,7 @@ const Footer = () => {
                 </ul>
 
                 {/* Modais */}
+                 <ModalContato isOpen={modalContato.isOpen} onClose={modalContato.close} />
                 <Modal isOpen={modalTermos.isOpen} onClose={modalTermos.close}>
                   <ModalContent
                     breadcrumb="Home > Termos de Uso"

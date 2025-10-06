@@ -93,7 +93,7 @@ export function ModalContato({ isOpen, onClose }) {
         }
       }}
     >
-      <div className="modal-wrapper">
+      <div className="modal-wrapper-contato">
         <div className="modal-card modal-contato">
           {/* Header */}
           <div className="modal-header">
