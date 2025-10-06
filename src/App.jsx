@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home";
-
 import Eventos from "./pages/Eventos";
 import Cadastro from "./pages/Cadastro";
 import ComoAjudar from "./pages/ComoAjudar"
@@ -12,13 +11,9 @@ import SobreNos from "./pages/SobreNos";
 import Blog from "./pages/Blog";
 import AdicionarNoticia from "./pages/AdicionarNoticia";
 
-
-
 const App = () => {
   return (
     <>
-
-    
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/eventos" element={<Eventos/>}/>
@@ -33,9 +28,8 @@ const App = () => {
         <Route path="/quero-ser-voluntario" element={<TornarVoluntario />} />  
         <Route path="/adicionar-noticia" element={<AdicionarNoticia />} />  
        {/*  <Route path='/*'element={ <NotFound/> }/>  */}
+       
         </Routes>
-      
-
     </>
   )
 }

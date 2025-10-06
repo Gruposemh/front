@@ -9,11 +9,10 @@ import card2 from "../../../assets/SobreNos/card2.png"
 import card3 from "../../../assets/SobreNos/card3.png"
 import card4 from "../../../assets/SobreNos/card4.png"
 import card5 from "../../../assets/SobreNos/card5.png"
-import AnimatedSection from "../../AnimatedSection";
 
-export default function SectionLinhaTempo() {
-    return (
-        <section className="section-tempo">
+const SectionLinhaTempo = ({ id }) => {
+  return (
+    <section id={id} className="section-linha-tempo">
             <Title title={"Linha do tempo"} />
     
             <div className="lista-acontecimentos">
@@ -57,3 +56,5 @@ export default function SectionLinhaTempo() {
         </section>
     )
 };
+
+export default SectionLinhaTempo
