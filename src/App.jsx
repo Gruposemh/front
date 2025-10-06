@@ -10,6 +10,7 @@ import Tarefas from './pages/Tarefas'
 import TornarVoluntario from "./pages/TornarVoluntario";
 import SobreNos from "./pages/SobreNos";
 import Blog from "./pages/Blog";
+import AdicionarNoticia from "./pages/AdicionarNoticia";
 
 
 
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/login" element={<Login />} />  
         <Route path="/quero-ser-voluntario" element={<TornarVoluntario />} />  
+        <Route path="/adicionar-noticia" element={<AdicionarNoticia />} />  
        {/*  <Route path='/*'element={ <NotFound/> }/>  */}
         </Routes>
       
