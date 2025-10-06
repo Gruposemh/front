@@ -3,6 +3,7 @@
     width: 951px;
     background-color: var(--color-white);
     border-radius: 20px;
+    transition: 0.5s ;
 }
 
 .cardeEventos-info{
@@ -11,6 +12,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+
 }
 
 .cardEventos-info h2{
@@ -38,6 +40,6 @@
 }
 
 .cardEventos-container:hover{
-    scale: 1.01;
-    transition: 0.3s linear;
+   transform: translateY(-10px);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
 }

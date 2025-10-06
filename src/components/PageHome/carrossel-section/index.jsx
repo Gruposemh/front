@@ -55,7 +55,7 @@ const CarrosselSection = () =>{
                         <div className="swiper-pagination"></div>
                     </Swiper>
                 </div>
-                <Link to="/sobre-nos">
+                <Link to="/sobre">
                <Button 
                 text= "Conheça nossa história"
                 primary={true}/>

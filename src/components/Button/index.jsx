@@ -1,11 +1,9 @@
 import { useState } from "react";
-import "../../styles/Button/style.css"
+import "../../styles/Button/style.css";
 
-const Button = ({ text, primary = true, onClick }) => {
+const Button = ({ text, primary = true, onClick, className = "" }) => {
   const [hover, setHover] = useState(false);
 
-  // Se for primary, começa como btn-primary e no hover vira btn-secondary
-  // Se for secondary, começa como btn-secondary e no hover vira btn-primary
   const buttonClass = primary
     ? hover
       ? "btn-secondary"
@@ -16,7 +14,7 @@ const Button = ({ text, primary = true, onClick }) => {
 
   return (
     <button
-      className={buttonClass}
+      className={`${buttonClass} ${className}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={onClick}
