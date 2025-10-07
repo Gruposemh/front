@@ -59,12 +59,30 @@
     margin: 0 auto;           
     display: block;
 }
+.upload-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 732px;          /* largura solicitada */
+    height: 285px;  
+    border: dashed 3px var(--color-grey);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 74px;
+}
+#iconUpload{
+    margin-left: 14.67px;
+    width: 24.33px;
+    height: 24.33px;
+}
+
 
 .form-noticia label {
    font-size: 24px;
     font-weight: 600; 
     color: var(--color-grey);
-    margin-bottom: 2px;
+    
 }
 
 
@@ -87,14 +105,74 @@
 }
 
 
-#uploadImage {
-    border: dashed 3px var(--color-grey);
-    border-radius: 10px;
-    padding: 100px 50px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 74px;
-}
+
 input#file-upload-button{
     display: none;
 }
+
+.upload-area {
+  position: relative;
+  width: 100%;
+  height: 300px; /* mantém o tamanho original do quadrado */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 74px;
+}
+
+
+
+/* AREA FIXA COM AS PROPORÇÕES EXATAS */
+.upload-area {
+  width: 732px;          /* largura solicitada */
+  height: 285px;         /* altura solicitada */
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* estado inicial (sem imagem) - mantém borda pontilhada */
+
+.upload-label img {
+  width: 732px;
+  height: 285px;
+}
+
+.upload-label span {
+  font-size: 16px;
+  color: var(--color-grey);
+  text-align: center;
+}
+
+.preview-wrapper {
+  position: relative;
+  width: 732px;
+  height: 285px;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* garante que a imagem preencha o quadrado sem deformar */
+}
+
+.image-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+ 
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
