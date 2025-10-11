@@ -22,9 +22,7 @@ const CardCadastro = ({ title, action }) => {
         });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
+    const handleSubmit = async () => {
         try {
             const url =
                 title === "Login"
@@ -38,19 +36,15 @@ const CardCadastro = ({ title, action }) => {
 
             const response = await fetch(url, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                headers: { "Content-Type": "application/json" },
+                credentials: "include", // ✅ envia cookies HttpOnly
                 body: JSON.stringify(body)
             });
 
             if (response.ok) {
                 if (title === "Login") {
-                    const data = await response.json();
-                    localStorage.setItem("token", data.token);
-                    navigate("/");
+                    navigate("/home");
                 } else {
-                    alert("Usuário cadastrado com sucesso!");
                     navigate("/login");
                 }
             } else if (response.status === 401) {
@@ -65,74 +59,65 @@ const CardCadastro = ({ title, action }) => {
     };
 
     return (
-        <>
-            <div className="background-card">
-                <div className="card-formulario">
-                    <h1>{title}</h1>
-                    <div className="inputs">
-                        {title !== "Login" && (
-                            <div className="input">
-                                <label htmlFor="nome">Nome completo</label>
-                                <input
-                                    type="text"
-                                    name="nome"
-                                    value={formData.nome}
-                                    onChange={handleChange}
-                                    required
-                                />
-                            </div>
-                        )}
+        <div className="background-card">
+            <div className="card-formulario">
+                <h1>{title}</h1>
+                <div className="inputs">
+                    {title !== "Login" && (
                         <div className="input">
-                            <label htmlFor="email">E-mail</label>
+                            <label htmlFor="nome">Nome completo</label>
                             <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
+                                type="text"
+                                name="nome"
+                                value={formData.nome}
                                 onChange={handleChange}
                                 required
                             />
                         </div>
-                        <div className="input">
-                            <label htmlFor="senha">Senha</label>
-                            <input
-                                type="password"
-                                name="senha"
-                                value={formData.senha}
-                                onChange={handleChange}
-                                required
-                            />
+                    )}
+                    <div className="input">
+                        <label htmlFor="email">E-mail</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="input">
+                        <label htmlFor="senha">Senha</label>
+                        <input
+                            type="password"
+                            name="senha"
+                            value={formData.senha}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                </div>
+                <Button text={action} onClick={handleSubmit} />
+
+                {title !== "Login" ? (
+                    <div className="opcoes-login">
+                        <p className="criar-conta">
+                            já tem uma conta?
+                            <span onClick={() => navigate("/login")}> Faça login </span>
+                        </p>
+                        <div className="social-buttons">
+                            <button className="social-btn facebook"><img src={facebook} /></button>
+                            <button className="social-btn google"><img src={google} /></button>
+                            <button className="social-btn apple"><img src={apple} /></button>
                         </div>
                     </div>
-                    <Button text={action} onClick={handleSubmit} />
-
-                    {title !== "Login" ? (
-                        <div className="opcoes-login">
-                            <p className="criar-conta">
-                                já tem uma conta?
-                                <span onClick={() => navigate("/login")}> Faça login </span>
-                            </p>
-                            <div className="social-buttons">
-                                <button className="social-btn facebook">
-                                    <img src={facebook} />
-                                </button>
-                                <button className="social-btn google">
-                                    <img src={google} />
-                                </button>
-                                <button className="social-btn apple">
-                                    <img src={apple} />
-                                </button>
-                            </div>
-
-                        </div>
-                    ) : (
-                        <p className="criar-conta">
-                            não tem uma conta?
-                            <span onClick={() => navigate("/cadastrar-se")}> Cadastre-se aqui </span>
-                        </p>
-                    )}
-                </div>
+                ) : (
+                    <p className="criar-conta">
+                        não tem uma conta?
+                        <span onClick={() => navigate("/cadastrar-se")}> Cadastre-se aqui </span>
+                    </p>
+                )}
             </div>
-        </>
+        </div>
     );
 };
 

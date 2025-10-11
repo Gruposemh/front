@@ -12,26 +12,23 @@ import Blog from "./pages/Blog";
 import AdicionarNoticia from "./pages/AdicionarNoticia";
 
 const App = () => {
-  const isLoggedIn = !!localStorage.getItem("token"); // verifica se tem token
-
   return (
-    <>
-      <Routes>
-        {/* Home só acessível se estiver logado */}
-        <Route path="/" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
+    <Routes>
+      {/* Sempre começa na tela de login */}
+      <Route path="/" element={<Navigate to="/login" />} />
 
-        <Route path="/eventos" element={<Eventos />} />
-        <Route path="/cadastrar-se" element={<Cadastro />} />
-        <Route path="/como-ajudar" element={<ComoAjudar />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sobre" element={<SobreNos />} />
-        <Route path="/tarefas" element={<Tarefas />} />
-        <Route path="/voluntario" element={<TornarVoluntario />} />
-        <Route path="/quero-ser-voluntario" element={<TornarVoluntario />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/adicionar-noticia" element={<AdicionarNoticia />} />
-      </Routes>
-    </>
+      <Route path="/login" element={<Login />} />
+      <Route path="/cadastrar-se" element={<Cadastro />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/eventos" element={<Eventos />} />
+      <Route path="/como-ajudar" element={<ComoAjudar />} />
+      <Route path="/sobre" element={<SobreNos />} />
+      <Route path="/tarefas" element={<Tarefas />} />
+      <Route path="/voluntario" element={<TornarVoluntario />} />
+      <Route path="/quero-ser-voluntario" element={<TornarVoluntario />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/adicionar-noticia" element={<AdicionarNoticia />} />
+    </Routes>
   );
 }
 
