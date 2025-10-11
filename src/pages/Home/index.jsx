@@ -6,7 +6,6 @@ import EstatisticaSection from "../../components/PageHome/estatisticas-section"
 import CarrosselSection from "../../components/PageHome/carrossel-section"
 import EmailSection from "../../components/PageHome/email-section"
 
-
 const Home =()=> {
     return(
         <>
