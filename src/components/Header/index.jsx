@@ -15,15 +15,32 @@ const Header = () => {
       try {
         const response = await fetch("http://localhost:8080/auth/check", {
           method: "GET",
-          credentials: "include" // envia cookies HttpOnly
+          credentials: "include"
         });
-        if (response.ok) setLogado(true);
-        else setLogado(false);
-      } catch {
+        
+        console.log("✅ Status da verificação de login:", response.status);
+        
+        if (response.ok) {
+          console.log("✅ Usuário está logado");
+          setLogado(true);
+        } else {
+          console.log("❌ Usuário não está logado");
+          setLogado(false);
+        }
+      } catch (error) {
+        console.error("❌ Erro ao verificar login:", error);
         setLogado(false);
       }
     };
+
     checkLogin();
+
+    // Escuta evento customizado para atualizar o estado após login
+    window.addEventListener('loginSuccess', checkLogin);
+    
+    return () => {
+      window.removeEventListener('loginSuccess', checkLogin);
+    };
   }, []);
 
   const handleLogout = async () => {
@@ -79,8 +96,8 @@ const Header = () => {
           {logado ? (
             <Button text="Sair →" primary={false} onClick={handleLogout} />
           ) : (
-            <Link to="/cadastrar-se">
-              <Button text="Cadastrar-se →" primary={false} />
+            <Link to="/login">
+              <Button text="Login →" primary={false} />
             </Link>
           )}
         </div>

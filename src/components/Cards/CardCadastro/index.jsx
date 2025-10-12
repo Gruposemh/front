@@ -42,12 +42,11 @@ const CardCadastro = ({ title, action }) => {
             });
 
             if (response.ok) {
-                if (response.ok) {
-                    if (title === "Login") {
-                        navigate("/");
-                    } else {
-                        navigate("/login");
-                    }
+                if (title === "Login") {
+                    // Redireciona e força reload para atualizar o Header
+                    window.location.href = "/";
+                } else {
+                    navigate("/login");
                 }
             } else if (response.status === 401) {
                 alert("E-mail ou senha incorretos.");
@@ -60,7 +59,7 @@ const CardCadastro = ({ title, action }) => {
         }
     };
 
-    // 🔹 Novo handler para login com Google
+    // Novo handler para login com Google
     const handleGoogleLogin = () => {
         window.location.href = "http://localhost:8080/oauth2/authorization/google";
     };
@@ -124,7 +123,6 @@ const CardCadastro = ({ title, action }) => {
                             <img src={facebook} alt="Facebook" />
                         </button>
 
-                        {/* 🔹 Botão Google que redireciona para o backend */}
                         <button
                             className="social-btn google"
                             onClick={handleGoogleLogin}
