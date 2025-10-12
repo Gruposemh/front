@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
 import Eventos from "./pages/Eventos";
 import Cadastro from "./pages/Cadastro";
@@ -12,13 +12,11 @@ import Blog from "./pages/Blog";
 import AdicionarNoticia from "./pages/AdicionarNoticia";
 
 const App = () => {
-  const isLoggedIn = !!localStorage.getItem("token"); // verifica se tem token
-
   return (
     <>
       <Routes>
-        {/* Home só acessível se estiver logado */}
-        <Route path="/" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
+        
+        <Route path="/" element={<Home />} />
 
         <Route path="/eventos" element={<Eventos />} />
         <Route path="/cadastrar-se" element={<Cadastro />} />
@@ -33,6 +31,6 @@ const App = () => {
       </Routes>
     </>
   );
-}
+};
 
 export default App;

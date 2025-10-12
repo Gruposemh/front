@@ -42,10 +42,12 @@ const CardCadastro = ({ title, action }) => {
             });
 
             if (response.ok) {
-                if (title === "Login") {
-                    navigate("/home");
-                } else {
-                    navigate("/login");
+                if (response.ok) {
+                    if (title === "Login") {
+                        navigate("/");
+                    } else {
+                        navigate("/login");
+                    }
                 }
             } else if (response.status === 401) {
                 alert("E-mail ou senha incorretos.");
@@ -56,6 +58,11 @@ const CardCadastro = ({ title, action }) => {
             console.error("Erro:", error);
             alert("Erro ao conectar com o servidor.");
         }
+    };
+
+    // 🔹 Novo handler para login com Google
+    const handleGoogleLogin = () => {
+        window.location.href = "http://localhost:8080/oauth2/authorization/google";
     };
 
     return (
@@ -96,26 +103,40 @@ const CardCadastro = ({ title, action }) => {
                         />
                     </div>
                 </div>
+
                 <Button text={action} onClick={handleSubmit} />
 
-                {title !== "Login" ? (
-                    <div className="opcoes-login">
+                <div className="opcoes-login">
+                    {title !== "Login" ? (
                         <p className="criar-conta">
                             já tem uma conta?
                             <span onClick={() => navigate("/login")}> Faça login </span>
                         </p>
-                        <div className="social-buttons">
-                            <button className="social-btn facebook"><img src={facebook} /></button>
-                            <button className="social-btn google"><img src={google} /></button>
-                            <button className="social-btn apple"><img src={apple} /></button>
-                        </div>
+                    ) : (
+                        <p className="criar-conta">
+                            não tem uma conta?
+                            <span onClick={() => navigate("/cadastrar-se")}> Cadastre-se aqui </span>
+                        </p>
+                    )}
+
+                    <div className="social-buttons">
+                        <button className="social-btn facebook">
+                            <img src={facebook} alt="Facebook" />
+                        </button>
+
+                        {/* 🔹 Botão Google que redireciona para o backend */}
+                        <button
+                            className="social-btn google"
+                            onClick={handleGoogleLogin}
+                        >
+                            <img src={google} alt="Google" />
+                        </button>
+
+                        <button className="social-btn apple">
+                            <img src={apple} alt="Apple" />
+                        </button>
                     </div>
-                ) : (
-                    <p className="criar-conta">
-                        não tem uma conta?
-                        <span onClick={() => navigate("/cadastrar-se")}> Cadastre-se aqui </span>
-                    </p>
-                )}
+                </div>
             </div>
         </div>
     );
