@@ -1,34 +1,20 @@
 import { useEffect } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function OAuth2Callback() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    // Extrair tokens da URL
-    const token = searchParams.get('token');
-    const refreshToken = searchParams.get('refreshToken');
-    const email = searchParams.get('email');
-    const role = searchParams.get('role');
-    const nome = searchParams.get('nome');
-
-    if (token && refreshToken) {
-      // Salvar tokens no localStorage
-      localStorage.setItem('token', token);
-      localStorage.setItem('refreshToken', refreshToken);
-      
-      if (email) localStorage.setItem('email', email);
-      if (role) localStorage.setItem('role', role);
-      if (nome) localStorage.setItem('nome', nome);
-
-      // Redirecionar para a home
+    console.log("🔄 OAuth2Callback - Disparando evento loginSuccess");
+    // O cookie já foi definido pelo backend OAuth2SuccessHandler
+    // Apenas redirecionar para a home e disparar evento de login
+    window.dispatchEvent(new Event('loginSuccess'));
+    
+    setTimeout(() => {
+      console.log("🏠 Redirecionando para home");
       navigate('/', { replace: true });
-    } else {
-      // Se não houver tokens, redirecionar para login
-      navigate('/login', { replace: true });
-    }
-  }, [navigate, searchParams]);
+    }, 500);
+  }, [navigate]);
 
   return (
     <div style={{

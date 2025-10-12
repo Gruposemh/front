@@ -7,35 +7,63 @@ import { Link, useNavigate } from 'react-router-dom';
 const Header = () => {
   const [aberto, setAberto] = useState(false);
   const [logado, setLogado] = useState(false);
+  const [carregando, setCarregando] = useState(true); // Estado de carregamento
   const navigate = useNavigate();
+
+  console.log("🎨 Header renderizado - Estado logado:", logado, "Carregando:", carregando);
 
   // Checa se o usuário está logado
   useEffect(() => {
     const checkLogin = async () => {
       try {
+        console.log("🔍 Verificando login...");
         const response = await fetch("http://localhost:8080/auth/check", {
           method: "GET",
           credentials: "include" // envia cookies HttpOnly
         });
-        if (response.ok) setLogado(true);
-        else setLogado(false);
-      } catch {
+        console.log("📡 Resposta do /auth/check:", response.status);
+        
+        if (response.ok) {
+          const data = await response.json();
+          console.log("✅ Usuário logado:", data);
+          setLogado(true);
+        } else {
+          console.log("❌ Usuário não logado");
+          setLogado(false);
+        }
+      } catch (error) {
+        console.error("❌ Erro ao verificar login:", error);
         setLogado(false);
+      } finally {
+        setCarregando(false); // Finaliza o carregamento
       }
     };
     checkLogin();
+    
+    // Escuta evento customizado para atualizar o estado após login
+    window.addEventListener('loginSuccess', checkLogin);
+    
+    return () => {
+      window.removeEventListener('loginSuccess', checkLogin);
+    };
   }, []);
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:8080/auth/logout", {
+      const response = await fetch("http://localhost:8080/auth/logout", {
         method: "POST",
         credentials: "include"
       });
-      setLogado(false);
-      navigate("/login");
+      
+      if (response.ok) {
+        console.log("✅ Logout realizado com sucesso");
+        setLogado(false);
+        navigate("/");
+      } else {
+        console.error("❌ Erro no logout");
+      }
     } catch (error) {
-      console.error("Erro no logout:", error);
+      console.error("❌ Erro no logout:", error);
     }
   };
 
@@ -55,7 +83,7 @@ const Header = () => {
               onMouseEnter={() => setAberto(true)}
               onMouseLeave={() => setAberto(false)}
             >
-              <li><Link to="/sobre">Sobre Nós ▾</Link></li>
+              <Link to="/sobre">Sobre Nós ▾</Link>
 
               <div className={`sobre-dropdown ${aberto ? "ativo" : "inativo"}`}>
                 <ul className="lista-dropdown">
@@ -76,12 +104,14 @@ const Header = () => {
             <Button text="Doe Agora" primary={true} />
           </Link>
 
-          {logado ? (
-            <Button text="Sair →" primary={false} onClick={handleLogout} />
-          ) : (
-            <Link to="/cadastrar-se">
-              <Button text="Cadastrar-se →" primary={false} />
-            </Link>
+          {!carregando && (
+            logado ? (
+              <Button text="Sair →" primary={false} onClick={handleLogout} />
+            ) : (
+              <Link to="/cadastrar-se">
+                <Button text="Cadastrar-se →" primary={false} />
+              </Link>
+            )
           )}
         </div>
       </header>

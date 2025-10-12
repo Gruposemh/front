@@ -60,6 +60,13 @@
     position: absolute;
     z-index: 2;
     top: 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.cabecalho:hover {
+    opacity: 0.8;
 }
 
 .cabecalho img{

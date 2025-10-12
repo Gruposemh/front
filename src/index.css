@@ -26,10 +26,33 @@
 }
 
 body{
-    font-family: 'Inter';;
-
-   
+    font-family: 'Inter';
 }
+
+/* Bloquear scroll quando modal estiver aberto */
+body.modal-open {
+    overflow: hidden !important;
+}
+
+/* Estilos globais para modais */
+dialog.modal-dialog {
+    border: none;
+    padding: 0;
+    background: transparent;
+    max-width: 90vw;
+    max-height: 90vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+dialog.modal-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
 
 button{
     outline: none;

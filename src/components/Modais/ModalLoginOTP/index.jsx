@@ -25,10 +25,10 @@ export function ModalLoginOTP({ isOpen, onClose, onSuccess }) {
 
     if (isOpen) {
       dialog.showModal();
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
     } else {
       dialog.close();
-      document.body.style.overflow = 'unset';
+      document.body.classList.remove('modal-open');
       // Reset ao fechar
       setStep(1);
       setEmail('');
@@ -37,7 +37,7 @@ export function ModalLoginOTP({ isOpen, onClose, onSuccess }) {
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.classList.remove('modal-open');
     };
   }, [isOpen]);
 
@@ -99,10 +99,9 @@ export function ModalLoginOTP({ isOpen, onClose, onSuccess }) {
         const data = await response.json();
         setMessage('Login realizado com sucesso!');
         
-        // Salvar token se necessário
-        if (data.token) {
-          localStorage.setItem('token', data.token);
-        }
+        // Cookie já foi definido pelo backend
+        // Disparar evento para atualizar o Header
+        window.dispatchEvent(new Event('loginSuccess'));
         
         setTimeout(() => {
           onSuccess?.();

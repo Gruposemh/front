@@ -53,10 +53,9 @@ const CardCadastro = ({ title, action }) => {
                 const data = await response.json();
                 
                 if (title === "Login") {
-                    // Salvar token se necessário
-                    if (data.token) {
-                        localStorage.setItem('token', data.token);
-                    }
+                    // Cookie já foi definido pelo backend
+                    // Disparar evento para atualizar o Header
+                    window.dispatchEvent(new Event('loginSuccess'));
                     navigate("/");
                 } else {
                     // Cadastro bem-sucedido - abrir modal de verificação

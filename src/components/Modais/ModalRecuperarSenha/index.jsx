@@ -29,10 +29,10 @@ export function ModalRecuperarSenha({ isOpen, onClose }) {
 
     if (isOpen) {
       dialog.showModal();
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
     } else {
       dialog.close();
-      document.body.style.overflow = 'unset';
+      document.body.classList.remove('modal-open');
       // Reset ao fechar
       setStep(1);
       setFormData({
@@ -45,7 +45,7 @@ export function ModalRecuperarSenha({ isOpen, onClose }) {
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.classList.remove('modal-open');
     };
   }, [isOpen]);
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../../styles/Cadastro/Capa/style.css"
 import logo from "../../../assets/Logos/logo.svg"
 
@@ -9,10 +10,10 @@ const CapaCadastro = ({title, img}) => {
               <div className="capa-container">
                 <img src={img} className="fundo" />
                 <div className="overlay"></div>
-                <div className="cabecalho">
+                <Link to="/" className="cabecalho">
                     <img src={logo} alt="logo" />
                     <p>Fazer o Bem <br /> Faz Muito Bem</p>
-                </div>
+                </Link>
                 <h1>{title}</h1>
             </div>
         </main>
