@@ -1,0 +1,34 @@
+.section-blog{
+    padding: 68px 60px;
+     
+}
+.blog-container{
+    text-align: center;
+    margin-top: 49px ;
+   
+    
+}
+ #btn-blog{
+    color: var(--color-grey-medium);
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 60px;
+    background: none;
+    
+}
+
+
+
+#btn-blog:hover{
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.cards-blog{
+    display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  justify-content: center;
+margin-top: 60px;
+}
+
