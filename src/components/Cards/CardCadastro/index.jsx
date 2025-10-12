@@ -37,7 +37,7 @@ const CardCadastro = ({ title, action }) => {
             const response = await fetch(url, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                credentials: "include", // ✅ envia cookies HttpOnly
+                credentials: "include",
                 body: JSON.stringify(body)
             });
 
