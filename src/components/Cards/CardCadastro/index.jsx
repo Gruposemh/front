@@ -23,6 +23,8 @@ const CardCadastro = ({ title, action }) => {
         senha: ""
     });
 
+    const [loading, setLoading] = useState(false);
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -31,6 +33,10 @@ const CardCadastro = ({ title, action }) => {
     };
 
     const handleSubmit = async () => {
+        if (loading) return; // Prevenir múltiplos cliques
+        
+        setLoading(true);
+        
         try {
             const url =
                 title === "Login"
@@ -41,6 +47,11 @@ const CardCadastro = ({ title, action }) => {
                 title === "Login"
                     ? { email: formData.email, senha: formData.senha }
                     : formData;
+
+            // Se for cadastro, abrir modal imediatamente
+            if (title !== "Login") {
+                modalVerificarEmail.open(formData.email);
+            }
 
             const response = await fetch(url, {
                 method: "POST",
@@ -58,19 +69,31 @@ const CardCadastro = ({ title, action }) => {
                     window.dispatchEvent(new Event('loginSuccess'));
                     navigate("/");
                 } else {
-                    // Cadastro bem-sucedido - abrir modal de verificação
-                    alert("Cadastro realizado! Verifique seu email.");
-                    modalVerificarEmail.open(formData.email);
+                    // Cadastro bem-sucedido - modal já está aberto
+                    console.log("✅ Cadastro realizado! Email enviado.");
                 }
             } else if (response.status === 401) {
                 alert("E-mail ou senha incorretos.");
+            } else if (response.status === 403) {
+                const error = await response.json();
+                alert(error.message || "Email não verificado.");
             } else {
                 const error = await response.json();
                 alert(error.message || "Erro ao processar requisição.");
+                // Se for cadastro e deu erro, fechar o modal
+                if (title !== "Login") {
+                    modalVerificarEmail.close();
+                }
             }
         } catch (error) {
             console.error("Erro:", error);
             alert("Erro ao conectar com o servidor.");
+            // Se for cadastro e deu erro, fechar o modal
+            if (title !== "Login") {
+                modalVerificarEmail.close();
+            }
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -118,7 +141,11 @@ const CardCadastro = ({ title, action }) => {
                     </div>
                 </div>
 
-                <Button text={action} onClick={handleSubmit} />
+                <Button 
+                    text={loading ? "Processando..." : action} 
+                    onClick={handleSubmit}
+                    disabled={loading}
+                />
 
                 {/* Opções extras para Login */}
                 {title === "Login" && (

@@ -104,15 +104,17 @@ const Header = () => {
             <Button text="Doe Agora" primary={true} />
           </Link>
 
-          {!carregando && (
-            logado ? (
+          <div style={{ minWidth: '150px' }}>
+            {carregando ? (
+              <div style={{ width: '150px', height: '40px' }}></div>
+            ) : logado ? (
               <Button text="Sair →" primary={false} onClick={handleLogout} />
             ) : (
               <Link to="/cadastrar-se">
                 <Button text="Cadastrar-se →" primary={false} />
               </Link>
-            )
-          )}
+            )}
+          </div>
         </div>
       </header>
     </>

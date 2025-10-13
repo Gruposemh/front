@@ -3,18 +3,31 @@ import LogoFooter from "../../assets/Footer/Logo-footer.svg";
 import Instagram from "../../assets/Footer/logo-instagram.svg";
 import Facebook from "../../assets/Footer/logo-facebook.svg";
 import WhatsApp from "../../assets/Footer/logo-whatsapp.svg";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { UseModal, Modal, ModalContent, TermosContent, PrivacidadeContent } from '../Modais/ModalTermos';
 import { UseModalContato, ModalContato } from '../Modais/ModalContato';
 
 
 const Footer = () => {
-   const modalContato = UseModalContato();
+  const navigate = useNavigate();
+  const modalContato = UseModalContato();
   const modalTermos = UseModal();
   const modalPrivacidade = UseModal();
 
-    const handleContatoClick = (e) => { 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+    scrollToTop();
+  };
+
+  const handleContatoClick = (e) => { 
     e.preventDefault();
     modalContato.open();
   };
@@ -90,11 +103,51 @@ const Footer = () => {
               <h3>Sobre</h3>
               <nav>
                 <ul className="footer-links">
-                  <li><Link to="/" className="footer-item">Home</Link></li>
-                  <li><Link to="/eventos" className="footer-item">Eventos</Link></li>
-                  <li><Link to="/sobre" className="footer-item">Sobre Nós</Link></li>
-                  <li><Link to="/blog" className="footer-item">Blog</Link></li>
-                  <li><Link to="/como-ajudar" className="footer-item">Como Ajudar</Link></li>
+                  <li>
+                    <a 
+                      href="/" 
+                      onClick={(e) => { e.preventDefault(); handleLinkClick('/'); }} 
+                      className="footer-item"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/eventos" 
+                      onClick={(e) => { e.preventDefault(); handleLinkClick('/eventos'); }} 
+                      className="footer-item"
+                    >
+                      Eventos
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/sobre" 
+                      onClick={(e) => { e.preventDefault(); handleLinkClick('/sobre'); }} 
+                      className="footer-item"
+                    >
+                      Sobre Nós
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/blog" 
+                      onClick={(e) => { e.preventDefault(); handleLinkClick('/blog'); }} 
+                      className="footer-item"
+                    >
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/como-ajudar" 
+                      onClick={(e) => { e.preventDefault(); handleLinkClick('/como-ajudar'); }} 
+                      className="footer-item"
+                    >
+                      Como Ajudar
+                    </a>
+                  </li>
                 </ul>
               </nav>
             </div>

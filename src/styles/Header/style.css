@@ -4,8 +4,8 @@ header{
     align-items: center;
     gap: 170px;
     margin-top: 20px;
-    position: relative; /* Adicionei */
-    z-index: 1000; /* Adicionei - garante que o header fique acima do conteúdo */
+    position: relative;
+    z-index: 1000;
 }
 
 .logo{
@@ -18,7 +18,7 @@ header{
     align-items: center;
     gap: 38.6px;
     list-style: none;
-    position: relative; /* Adicionei */
+    position: relative;
 }
 
 .nav-header a {
