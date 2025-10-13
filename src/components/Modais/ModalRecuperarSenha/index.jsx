@@ -62,7 +62,7 @@ export function ModalRecuperarSenha({ isOpen, onClose }) {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:8080/auth/request-password-reset', {
+      const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/request-password-reset", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email })
@@ -103,7 +103,7 @@ export function ModalRecuperarSenha({ isOpen, onClose }) {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:8080/auth/reset-password', {
+      const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/reset-password", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

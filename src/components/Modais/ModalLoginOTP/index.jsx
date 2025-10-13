@@ -47,7 +47,7 @@ export function ModalLoginOTP({ isOpen, onClose, onSuccess }) {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:8080/auth/request-otp', {
+      const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/request-otp", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -88,7 +88,7 @@ export function ModalLoginOTP({ isOpen, onClose, onSuccess }) {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:8080/auth/login-otp', {
+      const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/login-otp", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

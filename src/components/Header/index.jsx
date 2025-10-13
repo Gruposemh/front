@@ -17,7 +17,7 @@ const Header = () => {
     const checkLogin = async () => {
       try {
         console.log("🔍 Verificando login...");
-        const response = await fetch("http://localhost:8080/auth/check", {
+        const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/check", {
           method: "GET",
           credentials: "include" // envia cookies HttpOnly
         });
@@ -50,7 +50,7 @@ const Header = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:8080/auth/logout", {
+      const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/logout", {
         method: "POST",
         credentials: "include"
       });

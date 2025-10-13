@@ -15,7 +15,7 @@ const SectionBlog = () => {
 
     const fetchBlogs = async () => {
         try {
-            const response = await fetch("http://localhost:8080/blog/blogs", {
+            const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/blog/blogs", {
                 method: "GET",
                 credentials: "include"
             });

@@ -40,8 +40,8 @@ const CardCadastro = ({ title, action }) => {
         try {
             const url =
                 title === "Login"
-                    ? "http://localhost:8080/auth/login"
-                    : "http://localhost:8080/auth/register-modern";
+                    ? "https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/login"
+                    : "https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/register-modern";
 
             const body =
                 title === "Login"
@@ -99,7 +99,7 @@ const CardCadastro = ({ title, action }) => {
 
     // 🔹 Novo handler para login com Google
     const handleGoogleLogin = () => {
-        window.location.href = "http://localhost:8080/oauth2/authorization/google";
+        window.location.href = "https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/oauth2/authorization/google";
     };
 
     return (

@@ -80,7 +80,7 @@ const AdicionarNoticia = () => {
           const base64Image = reader.result;
 
           // Criar o blog com a imagem em Base64
-          const response = await fetch("http://localhost:8080/blog/criar", {
+          const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/blog/criar", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"

@@ -47,7 +47,7 @@ export function ModalVerificarEmail({ isOpen, onClose, email, onSuccess }) {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:8080/auth/verify-email-modern', {
+      const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/verify-email-modern", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, codigo })
@@ -76,7 +76,7 @@ export function ModalVerificarEmail({ isOpen, onClose, email, onSuccess }) {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:8080/auth/resend-verification', {
+      const response = await fetch("https://backend-tcc-cgbwa9c6gjd5bjfr.brazilsouth-01.azurewebsites.net/auth/resend-verification", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
