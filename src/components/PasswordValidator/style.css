@@ -1,0 +1,119 @@
+.password-validator {
+    margin-top: 10px;
+    padding: 14px 18px;
+    background: var(--color-grey-light);
+    border-radius: 20px;
+    border: 1px solid var(--color-grey-medium);
+}
+
+.validator-title {
+    margin: 0 0 12px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-grey-dark);
+}
+
+.validator-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 12px;
+    margin-bottom: 12px;
+}
+
+.validator-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.validator-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.validator-item.valid .validator-icon {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.validator-item.invalid .validator-icon {
+    background: var(--color-grey-medium);
+    color: var(--color-white);
+}
+
+.validator-item.valid .validator-text {
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.validator-item.invalid .validator-text {
+    color: var(--color-grey);
+}
+
+.validator-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    padding: 10px 14px;
+    background: var(--color-white);
+    border-radius: 15px;
+    border: 1px solid var(--color-grey-light);
+}
+
+.note-label {
+    font-size: 12px;
+    color: var(--color-grey-dark);
+    font-weight: 500;
+}
+
+.note-chars {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    letter-spacing: 4px;
+}
+
+.validator-success {
+    margin: 12px 0 0 0;
+    padding: 10px 14px;
+    background: var(--color-secondary);
+    border-radius: 15px;
+    color: var(--color-white);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .validator-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .validator-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .password-validator {
+        padding: 12px 14px;
+    }
+    
+    .note-chars {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+}
