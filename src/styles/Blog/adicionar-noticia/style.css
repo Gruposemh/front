@@ -168,7 +168,7 @@ input#file-upload-button{
 .action-btn {
   background: transparent;
   border: none;
- 
+  
   padding: 6px;
   cursor: pointer;
   display: flex;

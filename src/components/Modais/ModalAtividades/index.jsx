@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import Button from "../../Button";
 import "../../../styles/Modais/modalAtividades/style.css";
 
-const ModalAtividades = ({ aula, data, horario, isOpen, onClose, position }) => {
+const ModalAtividades = ({ aula, data, horario, isOpen, onClose, position, onInscrever}) => {
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -24,18 +24,20 @@ const ModalAtividades = ({ aula, data, horario, isOpen, onClose, position }) => 
   }, [isOpen, onClose]);
 
   if (!isOpen || !position) return null;
+  
 
   const style = {
     position: "absolute",
     top: position.top + "px",
     left: position.left + "px",
     width: position.width + "px",
-    padding: "34px 32px",
+    padding: "20px 32px",
     background: "#fff",
     textAlign: "center",
     borderRadius: "15px",
     boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
     zIndex: 1000,
+  
   };
 
   return (
@@ -43,7 +45,8 @@ const ModalAtividades = ({ aula, data, horario, isOpen, onClose, position }) => 
       <h3>{aula}</h3>
       <p>{data}</p>
       <p>{horario}</p>
-      <Button text="Inscrever-se" />
+      <Button text="Inscrever-se" onClick={onInscrever} />
+
     </div>
   );
 };
