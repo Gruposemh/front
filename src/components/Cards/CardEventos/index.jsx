@@ -17,7 +17,7 @@ const CardEventos = ({img, titulo, local, data}) => {
                         <p> 
                             <FaCalendarAlt className="data" style={{ marginRight: "8px" }} />
                             {data}</p>
-                            <Button text={"Saiba mais"} primary={true}/>
+                            <Button text={"Inscrever-se"} primary={true}/>
                     </div>
                     
                 

@@ -37,6 +37,7 @@
 .cardEventos-info button{
     padding: 13.5px 54.5px;
     text-align: center;
+    font-size: 17px;
 }
 
 .cardEventos-container:hover{
