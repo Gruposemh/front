@@ -6,7 +6,7 @@ import "../../../styles/Eventos/section-campanhas/style.css";
 import Button from "../../Button/";
 import Campanha01 from "../../../assets/Eventos/campanha-alimentacao.svg"
 import Campanha02 from "../../../assets/Eventos/campanha-sangue.svg"
-import Campanha03 from "../../../assets/Eventos/campanha-roupa.svg"
+import Campanha03 from "../../../assets/Eventos/roupa.jpg"
 
 import 'swiper/css';
 import 'swiper/css/pagination';

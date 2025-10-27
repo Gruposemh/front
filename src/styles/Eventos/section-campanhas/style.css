@@ -79,3 +79,8 @@
     padding-bottom: 60px; /* Espaço para a paginação */
 }
 
+.campanhas-carrossel img{
+    width: 813px;
+    height: 304px;
+    border-radius: 20px;
+}
