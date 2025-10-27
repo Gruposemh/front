@@ -36,3 +36,9 @@ span.swiper-pagination-bullet-active {
     text-align: center;
     z-index: 10;
 }
+
+.carrosselHome-image {
+    width: 1042px;
+    height: 398px;
+    border-radius: 20px;
+}

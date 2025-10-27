@@ -3,7 +3,7 @@ const CarrosselHome = ({image, alt}) => {
     return(
         <>
 
-            <img src={image} alt={`Imagem de ${alt}`}/>
+            <img className="carrosselHome-image" src={image} alt={`Imagem de ${alt}`}/>
 
         </>
     )

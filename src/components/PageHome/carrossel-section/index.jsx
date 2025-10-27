@@ -1,9 +1,9 @@
 import "../../../styles/Home/Carrossel-section/style.css"
 import Title from "../../Title"
 import Button from "../../Button"
-import Carrossel01 from "../../../assets/Home/carrossel-transformando.svg"
-import Carrossel02 from "../../../assets/Home/carrossel-doacao.svg"
-import Carrossel03 from "../../../assets/Home/carrossel-roupas.svg"
+import Carrossel01 from "../../../assets/Home/reciclagem.jpg"
+import Carrossel02 from "../../../assets/Home/roupa.jpg"
+import Carrossel03 from "../../../assets/Home/ajuda.jpg"
 import CarrosselHome from "../../Carrossel/Carrossel-home"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,9 +18,9 @@ import { Link } from "react-router-dom"
 const CarrosselSection = () =>{
 
         const imagens = [
-        { id: 1, src: Carrossel01, alt: 'um homem ajudando uma senhora de tranças' },
-        { id: 2, src: Carrossel02, alt: 'várias mãos juntas, uma em cima da outra' },
-        { id: 3, src: Carrossel03, alt: 'duas mulheres escolhendo roupas' },
+        { id: 1, src: Carrossel01, alt: 'três caixas de reciclagem' },
+        { id: 2, src: Carrossel02, alt: 'homem loiro segurando muitas roupas' },
+        { id: 3, src: Carrossel03, alt: 'mulher e um homem ajudando senhor a levantar' },
     ];
 
     return(
