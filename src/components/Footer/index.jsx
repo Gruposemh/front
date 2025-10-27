@@ -65,7 +65,7 @@ const Footer = () => {
 
   <div className="icon-social">
     <a 
-      href="https://w.app/axj1qg" 
+      href="https://wa.me/5511959247968?text=ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20ONG" 
       target="_blank" 
       rel="noopener noreferrer"
     >
