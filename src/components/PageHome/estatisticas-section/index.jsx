@@ -1,9 +1,11 @@
 import "../../../styles/Home/Estatistica-section/style.css"
 import ProgressCircle from "../../Progress/ProgressCircle"
+import AnimatedSection from "../../AnimatedSection"
 
 const EstatisticaSection = () =>{
     return(
         <>
+        <AnimatedSection delay={0.4} >
         <div className="parallax">
             <h2>Como estamos <br /> agindo para <br /> mudar o mundo</h2>
             <div className="dados-estatisticos">
@@ -14,6 +16,7 @@ const EstatisticaSection = () =>{
                 </div>
             </div>
         </div>
+        </AnimatedSection>
         </>
     )   
 }
