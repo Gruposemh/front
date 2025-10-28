@@ -3,19 +3,45 @@ import "../../../styles/Blog/adicionar-noticia/style.css";
 import IconUpload from "../../../assets/Blog/upload.svg";
 import { X, Check } from "lucide-react";
 import Button from "../../Button";
+import ImageCropModal from "../ImageCropModal";
 
 const AdicionarNoticia = () => {
   const [imagePreview, setImagePreview] = useState(null);
+  const [imageToCrop, setImageToCrop] = useState(null);
+  const [showCropModal, setShowCropModal] = useState(false);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setImagePreview(URL.createObjectURL(file));
+      const imageUrl = URL.createObjectURL(file);
+      setImageToCrop(imageUrl);
+      setShowCropModal(true);
+    }
+  };
+
+  const handleCropComplete = (croppedImage) => {
+    setImagePreview(croppedImage);
+    setShowCropModal(false);
+    setImageToCrop(null);
+  };
+
+  const handleCropCancel = () => {
+    setShowCropModal(false);
+    setImageToCrop(null);
+    // Limpar o input file ao cancelar
+    const fileInput = document.getElementById('uploadImage');
+    if (fileInput) {
+      fileInput.value = '';
     }
   };
 
   const removeImage = () => {
     setImagePreview(null);
+    // Limpar o input file para permitir selecionar a mesma imagem novamente
+    const fileInput = document.getElementById('uploadImage');
+    if (fileInput) {
+      fileInput.value = '';
+    }
   };
 
   const confirmImage = () => {
@@ -79,6 +105,15 @@ const AdicionarNoticia = () => {
           <Button type="submit" text="Enviar notícia" />
         </form>
       </div>
+
+      {/* Modal de Crop */}
+      {showCropModal && imageToCrop && (
+        <ImageCropModal
+          image={imageToCrop}
+          onClose={handleCropCancel}
+          onCropComplete={handleCropComplete}
+        />
+      )}
     </div>
   );
 };
