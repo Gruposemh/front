@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom'
+import { BlogProvider } from "./contexts/BlogContext";
 import Home from "./pages/Home";
 import Eventos from "./pages/Eventos";
 import Cadastro from "./pages/Cadastro";
@@ -10,10 +11,12 @@ import TornarVoluntario from "./pages/TornarVoluntario";
 import SobreNos from "./pages/SobreNos";
 import Blog from "./pages/Blog";
 import AdicionarNoticia from "./pages/AdicionarNoticia";
+import PageNoticiaCompleta from "./components/PageBlog/PageNoticiaCompleta";
+
 
 const App = () => {
   return (
-    <>
+    <BlogProvider>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/eventos" element={<Eventos/>}/>
@@ -24,13 +27,13 @@ const App = () => {
         <Route path="/tarefas" element={<Tarefas/>}/>
         <Route path="/voluntario" element={<TornarVoluntario/>}/>
         <Route path="/blog" element={<Blog/>}/>
-        <Route path="/login" element={<Login />} />  
+        <Route path="/blog/noticia/:id" element={<PageNoticiaCompleta/>}/>
         <Route path="/quero-ser-voluntario" element={<TornarVoluntario />} />  
         <Route path="/adicionar-noticia" element={<AdicionarNoticia />} />  
        {/*  <Route path='/*'element={ <NotFound/> }/>  */}
        
         </Routes>
-    </>
+    </BlogProvider>
   )
 }
 export default App;

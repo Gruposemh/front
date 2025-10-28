@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import "../../../styles/Cards/CardBlog/style.css"
 import Blur from "../../../assets/Blog/blur.svg"
-const CardBlog = ({ img, dateTime, titulo, noticia}) => {
+
+const CardBlog = ({ id, img, dateTime, titulo, noticia}) => {
     return(
         <>
         <article className="card-blog">
@@ -12,7 +14,9 @@ const CardBlog = ({ img, dateTime, titulo, noticia}) => {
             <div className="linha-blog"></div>
             <h4>{titulo}</h4>
             <p className="noticia">{noticia}</p>
-            <button className="btn-blog">Continue →</button>
+            <Link to={`/blog/noticia/${id}`}>
+              <button className="btn-blog">Continue →</button>
+            </Link>
            </div>
             
 

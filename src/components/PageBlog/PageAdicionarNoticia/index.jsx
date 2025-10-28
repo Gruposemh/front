@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useBlog } from "../../../contexts/BlogContext";
 import "../../../styles/Blog/adicionar-noticia/style.css";
 import IconUpload from "../../../assets/Blog/upload.svg";
 import { X, Check } from "lucide-react";
@@ -6,9 +8,13 @@ import Button from "../../Button";
 import ImageCropModal from "../ImageCropModal";
 
 const AdicionarNoticia = () => {
+  const navigate = useNavigate();
+  const { adicionarNoticia } = useBlog();
   const [imagePreview, setImagePreview] = useState(null);
   const [imageToCrop, setImageToCrop] = useState(null);
   const [showCropModal, setShowCropModal] = useState(false);
+  const [titulo, setTitulo] = useState("");
+  const [conteudo, setConteudo] = useState("");
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -49,12 +55,30 @@ const AdicionarNoticia = () => {
     alert("Imagem confirmada!");
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if (!imagePreview || !titulo || !conteudo) {
+      alert("Por favor, preencha todos os campos e adicione uma imagem!");
+      return;
+    }
+
+    const noticiaId = adicionarNoticia({
+      imagem: imagePreview,
+      titulo,
+      conteudo,
+    });
+
+    alert("Notícia publicada com sucesso!");
+    navigate(`/blog/noticia/${noticiaId}`);
+  };
+
   return (
     <div className="container-form-noticia">
       <div className="content-form-noticia">
         <h2>Escreva uma notícia para agregar na nossa comunidade</h2>
 
-        <form className="form-noticia">
+        <form className="form-noticia" onSubmit={handleSubmit}>
           <label htmlFor="uploadImage" className="upload-label">
             {imagePreview ? (
               <div className="preview-wrapper">
@@ -92,6 +116,9 @@ const AdicionarNoticia = () => {
             name="titulo"
             className="input-noticia"
             placeholder="Insira o título da sua notícia aqui"
+            value={titulo}
+            onChange={(e) => setTitulo(e.target.value)}
+            required
           />
 
           <label htmlFor="noticia" className="label-noticia">Notícia</label>
@@ -100,6 +127,9 @@ const AdicionarNoticia = () => {
             name="noticia"
             className="input-noticia"
             placeholder="Escreva sua notícia aqui"
+            value={conteudo}
+            onChange={(e) => setConteudo(e.target.value)}
+            required
           />
 
           <Button type="submit" text="Enviar notícia" />
