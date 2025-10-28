@@ -20,9 +20,13 @@
     color: var(--color-black);
 }
 
-.campanhas-carrossel button{
+.campanhas-carrossel button,
+.campanhas-carrossel a.btn-primary,
+.campanhas-carrossel a.btn-secondary{
     margin-top: 36px;
     padding: 13.5px 54.5px;
+    position: relative;
+    z-index: 2; /* fica acima do swiper/paginacao */
 }
 
 
@@ -45,6 +49,12 @@
 .meu-carrossel .swiper-slide-active {
     opacity: 1 !important;
     visibility: visible;
+}
+
+/* garante que o swiper fique abaixo do botao */
+.meu-carrossel{
+    position: relative;
+    z-index: 1;
 }
 
 /* Garante que o conteúdo do slide também respeite a transição */

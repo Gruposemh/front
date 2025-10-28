@@ -54,7 +54,7 @@ export default function SectionCampanhas() {
                         
                        
                     </Swiper>
-                    <Button text={"Saiba mais"} primary={true}/>
+                    
                 </div>
             </div>
             

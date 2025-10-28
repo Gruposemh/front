@@ -149,12 +149,15 @@ input#file-upload-button{
   position: relative;
   width: 732px;
   height: 285px;
+  padding: 1px;
+  box-sizing: border-box;
 }
 
 .preview-image {
   width: 100%;
   height: 100%;
   object-fit: cover; /* garante que a imagem preencha o quadrado sem deformar */
+  border-radius: 20px;
 }
 
 .image-actions {

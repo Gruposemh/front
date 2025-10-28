@@ -1,0 +1,137 @@
+.modal-evento-inscricao-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-evento-inscricao-container {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  animation: slideUp 0.3s ease-out;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Botão Fechar (X) */
+.close-button-evento {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #666;
+  transition: all 0.3s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button-evento:hover {
+  color: #b91c1c;
+  transform: scale(1.1);
+}
+
+.modal-evento-inscricao-container h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.modal-evento-inscricao-container .evento-nome {
+  font-size: 20px;
+  font-weight: 600;
+  color: #b91c1c;
+  margin: 10px 0 25px 0;
+}
+
+.modal-evento-inscricao-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-evento-inscricao-container input {
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.modal-evento-inscricao-container input:focus {
+  border-color: #b91c1c;
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.1);
+}
+
+.modal-evento-inscricao-container input::placeholder {
+  color: #999;
+}
+
+.modal-evento-inscricao-container button[type="button"],
+.modal-evento-inscricao-container button[type="submit"] {
+  margin-top: 10px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-evento-inscricao-container form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(185, 28, 28, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .modal-evento-inscricao-container {
+    padding: 30px 25px;
+    max-width: 90%;
+  }
+
+  .modal-evento-inscricao-container h3 {
+    font-size: 24px;
+  }
+
+  .modal-evento-inscricao-container .evento-nome {
+    font-size: 18px;
+  }
+}
