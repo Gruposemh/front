@@ -14,13 +14,13 @@
  <a href="#-componentes-principais">Componentes</a> • 
  <a href="#-páginas-principais">Páginas</a> • 
  <a href="#-configuração-e-deployment">Deploy</a> •  
- <a href="#-equipe-help-code">Equipe</a> • 
- <a href="#-licença">Licença</a>
-</p>
+ <a href="#equipe-help-code">Equipe</a> • 
+ 
+</p
 
 **Plataforma digital moderna e responsiva para gerenciamento de voluntariado e engajamento comunitário para ONG´s**
 
-[Visitar Site](#) • [Documentação](#-documentação) • [Contribuir](#-contribuindo)
+[Visitar Site](#) • [Documentação](#-licença) • [Contribuir](#-contribuindo)
 
 </div>
 
@@ -70,8 +70,7 @@ A plataforma permite que usuários se cadastrem, visualizem eventos, tarefas dis
 
 ---
 
-## 🛠️ Stack Tecnológico
-
+## 🛠 Stack Tecnológico
 ### Frontend Framework
 - **React 19.1.1**: Biblioteca JavaScript para construção de interfaces de usuário
 - **Vite 7.1.2**: Build tool moderno e extremamente rápido
@@ -307,7 +306,7 @@ Seções com animações Framer Motion para melhor experiência visual.
 
 ---
 
-## ⚙️ Configuração e Deployment
+## ⚙ Configuração e Deployment
 
 ### Configuração do Vite
 
@@ -398,6 +397,6 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ---
 
-[⬆ Voltar ao Topo](#-sistema-de-apoio-ao-voluntário-e-comunidade-frontend-(web))
+[⬆ Voltar ao Topo](#-sistema-de-apoio-ao-voluntário-e-comunidade---frontend-web)
 
 </div>
