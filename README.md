@@ -14,7 +14,7 @@
  <a href="#-componentes-principais">Componentes</a> • 
  <a href="#-páginas-principais">Páginas</a> • 
  <a href="#-configuração-e-deployment">Deploy</a> •  
- <a href="#equipe-help-code">Equipe</a> • 
+ <a href="#equipe-help-code">Equipe</a>  
  
 </p
 
