@@ -379,14 +379,9 @@ Abra uma issue descrevendo:
 
 ---
 
-## 📝 Licença
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
----
 
 ## Equipe Help Code
-
 
 - [Daniel Gualtieroni](https://github.com/DanieldeOliveiraGualtieroni)
 - [Iago Bondesan](https://github.com/Iagob12)
@@ -395,6 +390,11 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 - [Thiago Campos](https://github.com/xThgSilva)
  
 <div align="center">
+
+---
+## 📝 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
 
