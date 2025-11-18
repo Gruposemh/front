@@ -4,23 +4,23 @@
 
 <p align="center">
 <a href="#-sobre-o-projeto">Sobre</a> •
- <a href="#características-principais">Características</a> •
+ <a href="#-características-principais">Características</a> •
  <a href="#-layout">Layout</a> • 
- <a href="#stack-tecnológico">Tecnologias</a> •
- <a href="#pré-requisitos">Pré-requisitos</a> • 
- <a href="#instalação">Instalação</a> • 
- <a href="#como-usar">Executar</a> • 
- <a href="#estrutura-do-projeto">Estrutura</a> • 
- <a href="#componentes-principais">Componentes</a> • 
- <a href="#páginas-principais">Páginas</a> • 
- <a href="#configuração-e-deployment">Deploy</a> •  
+ <a href="#-stack-tecnológico">Tecnologias</a> •
+ <a href="#-pré-requisitos">Pré-requisitos</a> • 
+ <a href="#-instalação">Instalação</a> • 
+ <a href="#-como-usar">Executar</a> • 
+ <a href="#-estrutura-do-projeto">Estrutura</a> • 
+ <a href="#-componentes-principais">Componentes</a> • 
+ <a href="#-páginas-principais">Páginas</a> • 
+ <a href="#-configuração-e-deployment">Deploy</a> •  
  <a href="#-equipe-help-code">Equipe</a> • 
  <a href="#-licença">Licença</a>
 </p>
 
 **Plataforma digital moderna e responsiva para gerenciamento de voluntariado e engajamento comunitário para ONG´s**
 
-[Visitar Site](#) • [Documentação](#documentação) • [Contribuir](#contribuindo)
+[Visitar Site](#) • [Documentação](#-documentação) • [Contribuir](#-contribuindo)
 
 </div>
 
