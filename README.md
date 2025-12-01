@@ -20,7 +20,7 @@
 
 **Plataforma digital moderna e responsiva para gerenciamento de voluntariado e engajamento comunitário para ONG´s**
 
-[Visitar Site](#) • [Documentação](#-licença) • [Contribuir](#-contribuindo)
+[Visitar Site](https://front-tcc2.vercel.app) • [Documentação](#-licença) • [Contribuir](#-contribuindo)
 
 </div>
 
@@ -58,15 +58,12 @@ A plataforma permite que usuários se cadastrem, visualizem eventos, tarefas dis
 
 ### Tela de Usuário
 
-![Web1](https://github.com/maridabrins/Nexcent/blob/main/src/assets/images/Thumbnail.png)
+![Web1](https://github.com/Gruposemh/front/blob/main/src/assets/thumb-user.png)
 
-### Tela de Admin
-
-![Web1](https://github.com/maridabrins/Nexcent/blob/main/src/assets/images/Thumbnail.png)
 
 ### Tela de Voluntários
 
-![Web1](https://github.com/maridabrins/Nexcent/blob/main/src/assets/images/Thumbnail.png)
+![Web1](https://github.com/Gruposemh/front/blob/main/src/assets/thumb-volun2.png)
 
 ---
 
